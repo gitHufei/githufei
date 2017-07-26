@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/26/git/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="集中式和分布式版本控制系统 集中式版本控制系统的版本库是集中存放在中央服务器的，每次操作都要从中央服务器获取最新的版本，改动后将最新的版本推送到中央服务器。这种系统需要联网才能操作。集中式版本控制系统的代表有CVS,SVN等。 分布式版本控制系统的不需要中央服务器，每个客户端都有一个完整的版本库。但在实际中，为了数据交换的方便，分布式版本控制系统通常也有一台充当“中央服务器”的电脑。和集中式不同的">
-<meta property="og:updated_time" content="2017-07-26T11:34:19.087Z">
+<meta property="og:updated_time" content="2017-07-26T11:44:19.810Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git">
 <meta name="twitter:description" content="集中式和分布式版本控制系统 集中式版本控制系统的版本库是集中存放在中央服务器的，每次操作都要从中央服务器获取最新的版本，改动后将最新的版本推送到中央服务器。这种系统需要联网才能操作。集中式版本控制系统的代表有CVS,SVN等。 分布式版本控制系统的不需要中央服务器，每个客户端都有一个完整的版本库。但在实际中，为了数据交换的方便，分布式版本控制系统通常也有一台充当“中央服务器”的电脑。和集中式不同的">
@@ -96,7 +96,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#集中式和分布式版本控制系统"><span class="toc-number">1.</span> <span class="toc-text">集中式和分布式版本控制系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git准备阶段"><span class="toc-number">2.</span> <span class="toc-text">git准备阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fork"><span class="toc-number">2.1.</span> <span class="toc-text">fork</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pull-request"><span class="toc-number">2.2.</span> <span class="toc-text">pull request</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#集中式和分布式版本控制系统"><span class="toc-number">1.</span> <span class="toc-text">集中式和分布式版本控制系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git准备阶段"><span class="toc-number">2.</span> <span class="toc-text">git准备阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载与安装"><span class="toc-number">2.1.</span> <span class="toc-text">下载与安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置"><span class="toc-number">2.2.</span> <span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#查看git配置信息"><span class="toc-number">2.2.1.</span> <span class="toc-text">查看git配置信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置账户名和邮箱"><span class="toc-number">2.2.2.</span> <span class="toc-text">配置账户名和邮箱</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建目录和文件"><span class="toc-number">2.3.</span> <span class="toc-text">创建目录和文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fork"><span class="toc-number">2.4.</span> <span class="toc-text">fork</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pull-request"><span class="toc-number">2.5.</span> <span class="toc-text">pull request</span></a></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -139,19 +139,47 @@
 <li>集中式版本控制系统的版本库是集中存放在中央服务器的，每次操作都要从中央服务器获取最新的版本，改动后将最新的版本推送到中央服务器。这种系统需要联网才能操作。集中式版本控制系统的代表有CVS,SVN等。</li>
 <li>分布式版本控制系统的不需要中央服务器，每个客户端都有一个完整的版本库。但在实际中，为了数据交换的方便，分布式版本控制系统通常也有一台充当“中央服务器”的电脑。和集中式不同的时，这台电脑的作用主要是为了交换数据，而不是存放版本。分布式版本控制系统代表Git。</li>
 </ul>
-<h2 id="git准备阶段"><a href="#git准备阶段" class="headerlink" title="git准备阶段"></a>git准备阶段</h2><p>###下载与安装</p>
-<ul>
+<h2 id="git准备阶段"><a href="#git准备阶段" class="headerlink" title="git准备阶段"></a>git准备阶段</h2><h3 id="下载与安装"><a href="#下载与安装" class="headerlink" title="下载与安装"></a>下载与安装</h3><ul>
 <li>下载地址<a href="https://git-scm.com/downloads。" target="_blank" rel="external">https://git-scm.com/downloads。</a></li>
-<li>git安装时选择在window下使用git并且在window下使用linux命令<br>安装完成后查看git版本号确定是否安装成功<figure class="highlight plain"><figcaption><span>--version```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 配置</div><div class="line">#### 查看git配置信息</div></pre></td></tr></table></figure>
+<li>git安装时选择在window下使用git并且在window下使用linux命令<br>安装完成后查看git版本号确定是否安装成功<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git --version</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>git config –list<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#### 配置账户名和邮箱</div></pre></td></tr></table></figure></p>
-<p>git config –global user.name github账户名<br>git config –global user.email github邮箱<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">可以合并一起写</div></pre></td></tr></table></figure></p>
-<p>git config –global hufei0406 460284524@qq.com<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">##创建版本库</div><div class="line">进入文件夹，”shift+右键“打开cmd命令窗口或者Git bash。也可以通过cd（change Directory的缩写）命令切换当前路径。</div><div class="line">### 创建目录和文件</div><div class="line">- 创建一个文件夹，如mygit</div></pre></td></tr></table></figure></p>
-<p>mkdir mygit<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 进入创建的这个文件夹mygit</div></pre></td></tr></table></figure></p>
-<p>cd mygit<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- touch创建文件，可以创建以.开头的文件，如touch test.txt</div></pre></td></tr></table></figure></p>
-<p>touch 文件名<br>touch test.txt<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">- 编辑文件内容：</div><div class="line"> - vim模式</div><div class="line">1. `vi 文件名`，进入vim编辑模式`vi test.txt`</div><div class="line">2. i键或insert键 插入内容</div><div class="line">3.  esc键 + `:wq` 保存退出</div><div class="line"> - echo命令：把hello保存到test.txt中</div><div class="line"> `echo hello &gt; test.txt`</div><div class="line">“&gt;” 表示清空并写入内容</div><div class="line">“&gt;&gt;”表示在原来文件的末尾追加内容</div><div class="line"> - 用记事本手动编辑保存</div><div class="line"></div><div class="line">&gt;**vim模式输入内容：**</div><div class="line">把光标定位在第一行的第一个字符，</div><div class="line">按i进入插入模式</div><div class="line">输入想写的内容</div><div class="line">输入完成后按esc退出编辑模式</div><div class="line">输入:wq退出编辑模式</div><div class="line">如果不想输入内容直接按:q!退出编辑器</div><div class="line">- cat命令查看文件内容</div></pre></td></tr></table></figure></p>
-<p>cat 文件名<br>cat test.txt<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 删除文件夹或文件</div></pre></td></tr></table></figure></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="查看git配置信息"><a href="#查看git配置信息" class="headerlink" title="查看git配置信息"></a>查看git配置信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --list</div></pre></td></tr></table></figure>
+<h4 id="配置账户名和邮箱"><a href="#配置账户名和邮箱" class="headerlink" title="配置账户名和邮箱"></a>配置账户名和邮箱</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name github账户名</div><div class="line">git config --global user.email github邮箱</div></pre></td></tr></table></figure>
+<p>可以合并一起写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global hufei0406 460284524@qq.com</div></pre></td></tr></table></figure></p>
+<p>##创建版本库<br>进入文件夹，”shift+右键“打开cmd命令窗口或者Git bash。也可以通过cd（change Directory的缩写）命令切换当前路径。</p>
+<h3 id="创建目录和文件"><a href="#创建目录和文件" class="headerlink" title="创建目录和文件"></a>创建目录和文件</h3><ul>
+<li><p>创建一个文件夹，如mygit</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir mygit</div></pre></td></tr></table></figure>
+</li>
+<li><p>进入创建的这个文件夹mygit</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd mygit</div></pre></td></tr></table></figure>
+</li>
+<li><p>touch创建文件，可以创建以.开头的文件，如touch test.txt</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">touch 文件名</div><div class="line">touch test.txt</div></pre></td></tr></table></figure>
+</li>
+<li><p>编辑文件内容：</p>
+<ul>
+<li>vim模式</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><code>vi 文件名</code>，进入vim编辑模式<code>vi test.txt</code></li>
+<li>i键或insert键 插入内容</li>
+<li>esc键 + <code>:wq</code> 保存退出<ul>
+<li>echo命令：把hello保存到test.txt中<br><code>echo hello &gt; test.txt</code><br>“&gt;” 表示清空并写入内容<br>“&gt;&gt;”表示在原来文件的末尾追加内容</li>
+<li>用记事本手动编辑保存</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>vim模式输入内容：</strong><br>把光标定位在第一行的第一个字符，<br>按i进入插入模式<br>输入想写的内容<br>输入完成后按esc退出编辑模式<br>输入:wq退出编辑模式<br>如果不想输入内容直接按:q!退出编辑器</p>
+<ul>
+<li>cat命令查看文件内容<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cat 文件名</div><div class="line">cat test.txt</div><div class="line">```  </div><div class="line">- 删除文件夹或文件</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
 <p>rm -rf 文件/文件夹名<br>rm -rf mygit<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- ls命令列出当前目录下所有的文件，不包括隐藏文件</div><div class="line">- ls -al命令窗口当前目录下所有文件，包括隐藏文件</div></pre></td></tr></table></figure></p>
 <p>ls<br>ls -al<br>ls -a<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- git bash清除屏幕</div></pre></td></tr></table></figure></p>
 <p>clear<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 导出命令历史到文件</div></pre></td></tr></table></figure></p>
@@ -225,7 +253,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#集中式和分布式版本控制系统"><span class="toc-number">1.</span> <span class="toc-text">集中式和分布式版本控制系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git准备阶段"><span class="toc-number">2.</span> <span class="toc-text">git准备阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fork"><span class="toc-number">2.1.</span> <span class="toc-text">fork</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pull-request"><span class="toc-number">2.2.</span> <span class="toc-text">pull request</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#集中式和分布式版本控制系统"><span class="toc-number">1.</span> <span class="toc-text">集中式和分布式版本控制系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git准备阶段"><span class="toc-number">2.</span> <span class="toc-text">git准备阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载与安装"><span class="toc-number">2.1.</span> <span class="toc-text">下载与安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置"><span class="toc-number">2.2.</span> <span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#查看git配置信息"><span class="toc-number">2.2.1.</span> <span class="toc-text">查看git配置信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置账户名和邮箱"><span class="toc-number">2.2.2.</span> <span class="toc-text">配置账户名和邮箱</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建目录和文件"><span class="toc-number">2.3.</span> <span class="toc-text">创建目录和文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fork"><span class="toc-number">2.4.</span> <span class="toc-text">fork</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pull-request"><span class="toc-number">2.5.</span> <span class="toc-text">pull request</span></a></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
