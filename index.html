@@ -147,6 +147,100 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-EJS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/26/EJS/">EJS</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/26/EJS/" class="archive-article-date">
+  	<time datetime="2017-07-26T15:25:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ES6模板字符串中表示变量：<code>${JS代码}</code></p>
+<p>EJS语法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;% JS代码%&gt;</div><div class="line">&lt;%= 输出的内容%&gt;：是在HTML页面上真实展示的内容</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!--3.造模板--&gt;</span></div><div class="line">	<span class="comment">&lt;!--</span></div><div class="line">	给script标签加上type="text/template"表示的是html模板  加个id="boxTemplate"是为了方便后面第四部获取这个html模板用的</div><div class="line">	boxData：是你自己定义的数据的名字，它是模板数据  我们还需要把他跟AJAX获取出来的数据相关联</div><div class="line">	--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/template"</span> <span class="attr">id</span>=<span class="string">"boxTemplate"</span>&gt;</span><span class="xml"></span></div><div class="line">	<span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%$.each(boxData,function(index,item)&#123;%</span>&gt;</span></div><div class="line">			<span class="comment">&lt;!--处理li--&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">    			<span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">%=item.a%</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">				<span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">%=item.b%</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">				<span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">%=item.c%</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">			<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		</div><div class="line">		<span class="tag">&lt;<span class="name">%&#125;)%</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line">    data=[&#123;a:"A",b:"B",c:'C'&#125;,&#123;a:"aa",b:"bb",c:'cc'&#125;,&#123;a:"aaa",b:"bbb",c:'ccc'&#125;];</div><div class="line">    var boxHTML=$("#boxTemplate").html();</div><div class="line">    var result=ejs.render(boxHTML,&#123;boxData:data&#125;);</div><div class="line">	console.log(result);</div><div class="line">	$("#box").html(result);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>ES6中使用模板字符串需要两个过程 :<br>1.定义模板</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> htmlStr=<span class="string">`&lt;p&gt;<span class="subst">$&#123;<span class="number">1</span>+<span class="number">2</span>&#125;</span>&lt;/p&gt;`</span>;</div></pre></td></tr></table></figure>
+<p>2.手动将模板放到指定元素中</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">".box"</span>).html(htmlStr);</div></pre></td></tr></table></figure>
+<h2 id="EJS-四步曲"><a href="#EJS-四步曲" class="headerlink" title="EJS 四步曲"></a>EJS 四步曲</h2><ol>
+<li>在HTML结构中定义容器，例如：<code>&lt;div id=&quot;box&quot;&gt;&lt;/div&gt;</code></li>
+<li><p>通过AJAX动态获取data数据，如获取到的数据是</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data=[&#123;<span class="attr">a</span>:<span class="string">"A"</span>,<span class="attr">b</span>:<span class="string">"B"</span>,<span class="attr">c</span>:<span class="string">"C"</span>&#125;,&#123;<span class="attr">a</span>:<span class="string">"aa"</span>,<span class="attr">b</span>:<span class="string">"bb"</span>,<span class="attr">c</span>:<span class="string">"cc"</span>&#125;,&#123;<span class="attr">a</span>:<span class="string">"aaa"</span>,<span class="attr">b</span>:<span class="string">"bbb"</span>,<span class="attr">c</span>:<span class="string">"ccc"</span>&#125;];</div></pre></td></tr></table></figure>
+</li>
+<li><p>造模板 搭建HTML结构构导入数据</p>
+</li>
+<li><p>通过ejs.render 将html结构，模板数据，data数据渲染出来。<br>格式：<br><code>ejs.render(模板的html结构,{模板数据:真实数据(一般都是通过AJAX获取出来的数据)})</code></p>
+<p> 4-1. 获取HTML模板</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> boxHTML=$(<span class="string">"#boxTemplate"</span>).html();</div></pre></td></tr></table></figure>
+<p> 4-2. ejs.render()</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> result=ejs.render(boxHTML,&#123;<span class="attr">boxData</span>:data&#125;);</div><div class="line"><span class="built_in">console</span>.log(result);</div><div class="line">$(<span class="string">"#box"</span>).html(result);</div></pre></td></tr></table></figure></li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">EJS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/26/EJS/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -735,6 +829,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">EJS</a>
               </li>
             
             <div class="clearfix"></div>
