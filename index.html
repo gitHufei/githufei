@@ -42,7 +42,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/img/avatar.png" class="js-avatar">
+			<img src="/assets/20177139505387839.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">HuFei</a></h1>
@@ -61,11 +61,11 @@
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">文章列表</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友情链接</a>
     			
             
     			
@@ -98,7 +98,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/img/avatar.png" class="js-avatar">
+				<img src="/assets/20177139505387839.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">HuFei</h1>
@@ -167,8 +167,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>[toc]</p>
-<h2 id="集中式和分布式版本控制系统"><a href="#集中式和分布式版本控制系统" class="headerlink" title="集中式和分布式版本控制系统"></a>集中式和分布式版本控制系统</h2><ul>
+        <h2 id="集中式和分布式版本控制系统"><a href="#集中式和分布式版本控制系统" class="headerlink" title="集中式和分布式版本控制系统"></a>集中式和分布式版本控制系统</h2><ul>
 <li>集中式版本控制系统的版本库是集中存放在中央服务器的，每次操作都要从中央服务器获取最新的版本，改动后将最新的版本推送到中央服务器。这种系统需要联网才能操作。集中式版本控制系统的代表有CVS,SVN等。</li>
 <li>分布式版本控制系统的不需要中央服务器，每个客户端都有一个完整的版本库。但在实际中，为了数据交换的方便，分布式版本控制系统通常也有一台充当“中央服务器”的电脑。和集中式不同的时，这台电脑的作用主要是为了交换数据，而不是存放版本。分布式版本控制系统代表Git。</li>
 </ul>
@@ -350,6 +349,91 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/04/26/git/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-基于GitHub搭建博客-二" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/25/基于GitHub搭建博客-二/">使用Hexo搭建GitHub博客(二)</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/25/基于GitHub搭建博客-二/" class="archive-article-date">
+  	<time datetime="2017-04-25T08:52:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>上面使用Hexo搭建了GitHub博客,接下来进行博客的配置和个性化设置。</p>
+<h2 id="博客的整体配置"><a href="#博客的整体配置" class="headerlink" title="博客的整体配置　　"></a>博客的整体配置　　</h2><p>博客的整体配置在<code>E:\Hexo\_config.yml</code>文件中进行。默认使用的主题是landscape，主题的配置在<code>E:\Hexo\themes\landscape\_config.yml</code>。主题的配置可以暂时不动，等到更换了自己满意的主题后再进行。先来说一下博客的整体配置，也就是打开<code>E:\Hexo\_config.yml</code>文件，更改里面的部分内容。简化起见，其他内容先不做更改，只更改#site下面的内容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># Site</div><div class="line">title: Github Blog #网站名称，会在标签页上显示</div><div class="line">subtitle: #副标题</div><div class="line">description: #网站描述</div><div class="line">author: HuFei #作者</div><div class="line">language: #语言</div><div class="line">timezone:</div></pre></td></tr></table></figure>
+<p>更改完毕之后，启动本地预览，在浏览器中访问<code>localhost:4000</code>预览配置的效果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s</div></pre></td></tr></table></figure></p>
+<p>如果满意的话，同步到Github上:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div><div class="line">或者</div><div class="line">hexo d -g</div></pre></td></tr></table></figure></p>
+<h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>关于主题的选择，可以到Hexo官方主题页面选择自己喜欢的主题，也可以到Github上搜索别人制作的主题。<br>使用Hexo更换主题，先使用克隆命令安装好主题，然后更改一下博客的配置文件<code>E:\Hexo\_config.yml</code>里面的主题名称就好了。</p>
+<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>如安装yilia主题，在博客目录<code>E:\Hexo</code>下右键选择Git Bash,输入命令:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</div></pre></td></tr></table></figure>
+<h3 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h3><p>修改博客目录<code>E:\Hexo\_config.yml</code>中的theme属性，将其设置为yilia。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: yilia</div></pre></td></tr></table></figure>
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>主题的配置在themes文件夹下的<code>_config.yml</code>中进行.<br><code>E:\Hexo\themes\yilia\_config.yml</code>文件里面了。一般而言，主题的作者都会有对主题的相关介绍，看他介绍的修改就可以了。<br>提醒一点，主题中配置的头像等图片资源文件的路径是以source文件夹为路径的。</p>
+<h3 id="将配置同步到Github"><a href="#将配置同步到Github" class="headerlink" title="将配置同步到Github"></a>将配置同步到Github</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git d -g</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/25/基于GitHub搭建博客-二/">展开全文 >></a>
         </p>
       
 
@@ -617,11 +701,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">文章列表</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友情链接</a></li>
       
         
       
@@ -702,27 +786,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="http://thestocks.im/?ref=flatuicolors.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>配色网站</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+              <a href="http://react.huziketang.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>react小书</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+              <a href="http://es6.ruanyifeng.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>阮一峰ES6</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="https://cn.vuejs.org/v2/guide/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Vue中文文档</a>
             </li>
           
         </ul>
