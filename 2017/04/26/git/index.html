@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="集中式和分布式版本控制系统 集中式版本控制系统的版本库是集中存放在中央服务器的，每次操作都要从中央服务器获取最新的版本，改动后将最新的版本推送到中央服务器。这种系统需要联网才能操作。集中式版本控制系统的代表有CVS,SVN等。 分布式版本控制系统的不需要中央服务器，每个客户端都有一个完整的版本库。但在实际中，为了数据交换的方便，分布式版本控制系统通常也有一台充当“中央服务器”的电脑。和集中式不同的">
+<meta name="keywords" content="Git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git">
+<meta property="og:url" content="http://yoursite.com/2017/04/26/git/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="集中式和分布式版本控制系统 集中式版本控制系统的版本库是集中存放在中央服务器的，每次操作都要从中央服务器获取最新的版本，改动后将最新的版本推送到中央服务器。这种系统需要联网才能操作。集中式版本控制系统的代表有CVS,SVN等。 分布式版本控制系统的不需要中央服务器，每个客户端都有一个完整的版本库。但在实际中，为了数据交换的方便，分布式版本控制系统通常也有一台充当“中央服务器”的电脑。和集中式不同的">
+<meta property="og:updated_time" content="2017-07-26T11:34:19.087Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git">
+<meta name="twitter:description" content="集中式和分布式版本控制系统 集中式版本控制系统的版本库是集中存放在中央服务器的，每次操作都要从中央服务器获取最新的版本，改动后将最新的版本推送到中央服务器。这种系统需要联网才能操作。集中式版本控制系统的代表有CVS,SVN等。 分布式版本控制系统的不需要中央服务器，每个客户端都有一个完整的版本库。但在实际中，为了数据交换的方便，分布式版本控制系统通常也有一台充当“中央服务器”的电脑。和集中式不同的">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Git</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2017/04/25/基于GitHub搭建博客/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/04/26/git/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/04/26/git/&text=Git"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/04/26/git/&title=Git"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/04/26/git/&is_video=false&description=Git"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Git&body=Check out this article: http://yoursite.com/2017/04/26/git/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/04/26/git/&title=Git"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/04/26/git/&title=Git"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/04/26/git/&title=Git"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/04/26/git/&title=Git"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/04/26/git/&name=Git&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#集中式和分布式版本控制系统"><span class="toc-number">1.</span> <span class="toc-text">集中式和分布式版本控制系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git准备阶段"><span class="toc-number">2.</span> <span class="toc-text">git准备阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fork"><span class="toc-number">2.1.</span> <span class="toc-text">fork</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pull-request"><span class="toc-number">2.2.</span> <span class="toc-text">pull request</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Git
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Hexo</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-04-26T02:36:16.000Z" itemprop="datePublished">2017-04-26</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Git/">Git</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="集中式和分布式版本控制系统"><a href="#集中式和分布式版本控制系统" class="headerlink" title="集中式和分布式版本控制系统"></a>集中式和分布式版本控制系统</h2><ul>
+<li>集中式版本控制系统的版本库是集中存放在中央服务器的，每次操作都要从中央服务器获取最新的版本，改动后将最新的版本推送到中央服务器。这种系统需要联网才能操作。集中式版本控制系统的代表有CVS,SVN等。</li>
+<li>分布式版本控制系统的不需要中央服务器，每个客户端都有一个完整的版本库。但在实际中，为了数据交换的方便，分布式版本控制系统通常也有一台充当“中央服务器”的电脑。和集中式不同的时，这台电脑的作用主要是为了交换数据，而不是存放版本。分布式版本控制系统代表Git。</li>
+</ul>
+<h2 id="git准备阶段"><a href="#git准备阶段" class="headerlink" title="git准备阶段"></a>git准备阶段</h2><p>###下载与安装</p>
+<ul>
+<li>下载地址<a href="https://git-scm.com/downloads。" target="_blank" rel="external">https://git-scm.com/downloads。</a></li>
+<li>git安装时选择在window下使用git并且在window下使用linux命令<br>安装完成后查看git版本号确定是否安装成功<figure class="highlight plain"><figcaption><span>--version```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 配置</div><div class="line">#### 查看git配置信息</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>git config –list<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#### 配置账户名和邮箱</div></pre></td></tr></table></figure></p>
+<p>git config –global user.name github账户名<br>git config –global user.email github邮箱<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">可以合并一起写</div></pre></td></tr></table></figure></p>
+<p>git config –global hufei0406 460284524@qq.com<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">##创建版本库</div><div class="line">进入文件夹，”shift+右键“打开cmd命令窗口或者Git bash。也可以通过cd（change Directory的缩写）命令切换当前路径。</div><div class="line">### 创建目录和文件</div><div class="line">- 创建一个文件夹，如mygit</div></pre></td></tr></table></figure></p>
+<p>mkdir mygit<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 进入创建的这个文件夹mygit</div></pre></td></tr></table></figure></p>
+<p>cd mygit<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- touch创建文件，可以创建以.开头的文件，如touch test.txt</div></pre></td></tr></table></figure></p>
+<p>touch 文件名<br>touch test.txt<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">- 编辑文件内容：</div><div class="line"> - vim模式</div><div class="line">1. `vi 文件名`，进入vim编辑模式`vi test.txt`</div><div class="line">2. i键或insert键 插入内容</div><div class="line">3.  esc键 + `:wq` 保存退出</div><div class="line"> - echo命令：把hello保存到test.txt中</div><div class="line"> `echo hello &gt; test.txt`</div><div class="line">“&gt;” 表示清空并写入内容</div><div class="line">“&gt;&gt;”表示在原来文件的末尾追加内容</div><div class="line"> - 用记事本手动编辑保存</div><div class="line"></div><div class="line">&gt;**vim模式输入内容：**</div><div class="line">把光标定位在第一行的第一个字符，</div><div class="line">按i进入插入模式</div><div class="line">输入想写的内容</div><div class="line">输入完成后按esc退出编辑模式</div><div class="line">输入:wq退出编辑模式</div><div class="line">如果不想输入内容直接按:q!退出编辑器</div><div class="line">- cat命令查看文件内容</div></pre></td></tr></table></figure></p>
+<p>cat 文件名<br>cat test.txt<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 删除文件夹或文件</div></pre></td></tr></table></figure></p>
+<p>rm -rf 文件/文件夹名<br>rm -rf mygit<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- ls命令列出当前目录下所有的文件，不包括隐藏文件</div><div class="line">- ls -al命令窗口当前目录下所有文件，包括隐藏文件</div></pre></td></tr></table></figure></p>
+<p>ls<br>ls -al<br>ls -a<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- git bash清除屏幕</div></pre></td></tr></table></figure></p>
+<p>clear<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 导出命令历史到文件</div></pre></td></tr></table></figure></p>
+<p>history &gt; 1.txt<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">###初始化仓库</div><div class="line">- 初始化git，把这个目录变成Git可以管理的仓库</div><div class="line">- 初始化后git bash窗口文件夹名后出现master，在mygit文件夹中会出现隐藏文件夹.git，这个目录是Git跟踪管理版本库用的。</div></pre></td></tr></table></figure></p>
+<p>git init<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 如果不想再让文件夹被git管理，使用命令删除.git文件夹即可</div></pre></td></tr></table></figure></p>
+<p>rm -rf .git<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## Git工作流</div><div class="line">本地仓库是由git维护的三棵“树型(有层级关系)区域”组成。</div><div class="line"></div><div class="line">- **工作区**：</div><div class="line">对应你的物理目录，树型结构，也就是编辑代码的地方；</div><div class="line">- **暂存区**：</div><div class="line">工作区和历史提交的中间缓存，代表需要提交的工作状态，维护虚拟树型结构,临时保存你的改动；</div><div class="line">- **历史区（版本库）**：</div><div class="line">树型结构，历史仓库，指向你最近一次提交后的结果。</div><div class="line">大部分时候是先提交到暂存区中，再提交到历史里面。也可以从历史记录里面检出数据到暂存区和工作区。</div><div class="line">![](https://ooo.0o0.ooo/2017/07/01/5957b3daf3b73.jpg)</div><div class="line"></div><div class="line">## Git管理版本</div><div class="line">### 查看git状态</div></pre></td></tr></table></figure></p>
+<p>git status<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">文件修改后通过git status查看当前状态</div><div class="line">### 从工作区添加文件到暂存区</div></pre></td></tr></table></figure></p>
+<p>git add 文件名<br>git add 首字母+tab  快捷输入文件名<br>git add . 把所有的文件加入git暂存区<br>git add -A 把所有的文件加入git暂存区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; 工作区的文件在git bash是红色的，暂存区的文件是绿色的。</div><div class="line"></div><div class="line">### 从暂存区提交文件到历史区</div></pre></td></tr></table></figure></p>
+<p>git commit -m ‘注释内容’<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 添加和提交可以合并使用一个命令，但第一次提交不能使用</div></pre></td></tr></table></figure></p>
+<p>git commit -a -m ‘信息’<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">产生冲突需要手动决绝冲突，删掉不需要的内容，提交最终的结果</div></pre></td></tr></table></figure></p>
+<p>rebase cherry-pick<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 查看提交日志</div></pre></td></tr></table></figure></p>
+<p>git log<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">## 不同区文件比较</div><div class="line">#### 工作区和暂存区</div></pre></td></tr></table></figure></p>
+<p>git diff<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#### 暂存区和历史区</div></pre></td></tr></table></figure></p>
+<p>git diff –cached<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#### 工作区和版本库</div></pre></td></tr></table></figure></p>
+<p>git diff master<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">## 撤销</div><div class="line">### 从暂存区撤销回git add的内容</div><div class="line">- 如误操作将工作区中不准确的内容推送到了暂存区，可以移除本次向暂存区的推送，让暂存区回到同步前的正确状态。</div><div class="line">- 移除某一个文件的同步</div></pre></td></tr></table></figure></p>
+<p>git reset HEAD 文件名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 通过版本id恢复</div></pre></td></tr></table></figure></p>
+<p>git reset hard commit_id<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 撤回所有文件的同步</div></pre></td></tr></table></figure></p>
+<p>git reset HEAD .<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">## 恢复</div><div class="line">### 从历史区恢复文件到工作区</div><div class="line">- 如工作区出错，或工作区文件丢失，可以从历史区恢复上次提交的正确内容或找回文件</div><div class="line">- 先从缓存区恢复，如果缓存区无内容，可以从历史区域恢复</div></pre></td></tr></table></figure></p>
+<p>git checkout “文件名”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 恢复某个版本文件</div></pre></td></tr></table></figure></p>
+<p>git checkout commit_id filename 某个文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## 回滚</div><div class="line">- 将工作区，暂存区，历史区用同一个版本全部覆盖掉</div></pre></td></tr></table></figure></p>
+<p>git reset –hard 版本号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 查看回滚前的版本号</div></pre></td></tr></table></figure></p>
+<p>git reflog<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">## 分支管理</div><div class="line">### 创建分支</div></pre></td></tr></table></figure></p>
+<p>git branch dev<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">### 查看分支</div></pre></td></tr></table></figure></p>
+<p>git branch<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">### 切换分支</div></pre></td></tr></table></figure></p>
+<p>git checkout dev<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">### 创建并切换分支</div></pre></td></tr></table></figure></p>
+<p>git checkout -b dev<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">### 合并分支</div></pre></td></tr></table></figure></p>
+<p>git merge dev<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">### 删除分支</div></pre></td></tr></table></figure></p>
+<p>git branch -d dev<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## 提交到远程仓库</div><div class="line">- 初始化，一个目录只做一次</div><div class="line">```git init</div></pre></td></tr></table></figure></p>
+<ul>
+<li><p>新建一个.gitignore文件，里面写上忽略的内容，如webstorm生成的.idea文件夹，安装node模块生成的node_modules文件夹，每次同步不会同步忽略的文件和目录</p>
+<figure class="highlight plain"><figcaption><span>.gitignore```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">- 创建需要提交的文件（空文件夹不会被提交.gitkeep）</div><div class="line">- 添加到暂存区</div><div class="line">```git add .</div></pre></td></tr></table></figure>
+</li>
+<li><p>添加到历史区</p>
+<figure class="highlight plain"><figcaption><span>commit -m'xxx'```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 链接远程仓库</div><div class="line">打开Github，新建一个仓库(repository)，在quick setup下有个网站，如https://github.com/hufei0406/mygit.git。别名代表了这个仓库，地址也代表了这个仓库。关联后同步的内容就会添加到这个仓库中。</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>git remote add 别名(origin) 地址<br>git remote -v 查看关联的仓库<br>git remote rm 别名     可以删除链接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">### 推送</div></pre></td></tr></table></figure></p>
+<p>git push origin master<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">### 发布github静态页</div><div class="line">- 必须要有一个固定的分支 (gh-pages)</div><div class="line">- 需要将内容发送到这个分支上</div><div class="line">- 在setting中可以免费送你一个网址</div></pre></td></tr></table></figure></p>
+<p>git checkout -b gh-pages<br>touch index.html<br>git add .<br>git commit -m’addHtml’<br>git push origin gh-pages<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">### 克隆</div><div class="line">克隆一次，克隆下来默认会赠送一个地址，可以在这个地址上使用git pull 不停的更新数据到本地。在更新数据时如果遇到冲突不能拉取，先提交到历史区，然后删除冲突文件，再次拉取即可</div></pre></td></tr></table></figure></p>
+<p>git clone 别人的地址 别名(文件夹名)<br>git pull origin master<br>```</p>
+<h3 id="fork"><a href="#fork" class="headerlink" title="fork"></a>fork</h3><ul>
+<li>可以把别人的项目拷贝一份变成自己的（原作者更新代码，这边fork下来的不受影响）</li>
+</ul>
+<h3 id="pull-request"><a href="#pull-request" class="headerlink" title="pull request"></a>pull request</h3><ul>
+<li>可以向项目的原作者发送合并请求（必须是fork过来的才可以发送合并请求）</li>
+<li>原作者同意合并请求后将把请求者的代码合并到原作者的内容中</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#集中式和分布式版本控制系统"><span class="toc-number">1.</span> <span class="toc-text">集中式和分布式版本控制系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git准备阶段"><span class="toc-number">2.</span> <span class="toc-text">git准备阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fork"><span class="toc-number">2.1.</span> <span class="toc-text">fork</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pull-request"><span class="toc-number">2.2.</span> <span class="toc-text">pull request</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/04/26/git/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/04/26/git/&text=Git"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/04/26/git/&title=Git"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/04/26/git/&is_video=false&description=Git"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Git&body=Check out this article: http://yoursite.com/2017/04/26/git/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/04/26/git/&title=Git"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/04/26/git/&title=Git"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/04/26/git/&title=Git"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/04/26/git/&title=Git"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/04/26/git/&name=Git&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 HuFei
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/probberechts">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
