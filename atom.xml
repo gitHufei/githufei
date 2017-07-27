@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-26T16:49:01.792Z</updated>
+  <updated>2017-07-27T06:28:47.160Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,12 +20,13 @@
     <link href="http://yoursite.com/2017/07/26/EJS/"/>
     <id>http://yoursite.com/2017/07/26/EJS/</id>
     <published>2017-07-26T15:25:05.000Z</published>
-    <updated>2017-07-26T16:49:01.792Z</updated>
+    <updated>2017-07-27T06:28:47.160Z</updated>
     
     <content type="html"><![CDATA[<p>ES6模板字符串中表示变量：<code>${JS代码}</code></p>
 <p>EJS语法:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;% JS代码%&gt;</div><div class="line">&lt;%= 输出的内容%&gt;：是在HTML页面上真实展示的内容</div></pre></td></tr></table></figure>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!--3.造模板--&gt;</span></div><div class="line">	<span class="comment">&lt;!--</span></div><div class="line">	给script标签加上type="text/template"表示的是html模板  加个id="boxTemplate"是为了方便后面第四部获取这个html模板用的</div><div class="line">	boxData：是你自己定义的数据的名字，它是模板数据  我们还需要把他跟AJAX获取出来的数据相关联</div><div class="line">	--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/template"</span> <span class="attr">id</span>=<span class="string">"boxTemplate"</span>&gt;</span><span class="xml"></span></div><div class="line">	<span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%$.each(boxData,function(index,item)&#123;%</span>&gt;</span></div><div class="line">			<span class="comment">&lt;!--处理li--&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">    			<span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">%=item.a%</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">				<span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">%=item.b%</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">				<span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">%=item.c%</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">			<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		</div><div class="line">		<span class="tag">&lt;<span class="name">%&#125;)%</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line">    data=[&#123;a:"A",b:"B",c:'C'&#125;,&#123;a:"aa",b:"bb",c:'cc'&#125;,&#123;a:"aaa",b:"bbb",c:'ccc'&#125;];</div><div class="line">    var boxHTML=$("#boxTemplate").html();</div><div class="line">    var result=ejs.render(boxHTML,&#123;boxData:data&#125;);</div><div class="line">	console.log(result);</div><div class="line">	$("#box").html(result);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>ES6中使用模板字符串需要两个过程 :<br>1.定义模板</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> htmlStr=<span class="string">`&lt;p&gt;<span class="subst">$&#123;<span class="number">1</span>+<span class="number">2</span>&#125;</span>&lt;/p&gt;`</span>;</div></pre></td></tr></table></figure>
 <p>2.手动将模板放到指定元素中</p>
@@ -49,7 +50,8 @@
     
       &lt;p&gt;ES6模板字符串中表示变量：&lt;code&gt;${JS代码}&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;EJS语法:&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;% JS代码%&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;%= 输出的内容%&amp;gt;：是在HTML页面上真实展示的内容&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;box&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;&amp;lt;!--3.造模板--&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;&amp;lt;!--&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	给script标签加上type=&quot;text/template&quot;表示的是html模板  加个id=&quot;boxTemplate&quot;是为了方便后面第四部获取这个html模板用的&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	boxData：是你自己定义的数据的名字，它是模板数据  我们还需要把他跟AJAX获取出来的数据相关联&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	--&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/template&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;boxTemplate&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;xml&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;ul&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;%$.each(boxData,function(index,item)&amp;#123;%&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;			&lt;span class=&quot;comment&quot;&gt;&amp;lt;!--处理li--&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;			&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    			&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;%=item.a%&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;				&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;%=item.b%&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;				&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;%=item.c%&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;			&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;%&amp;#125;)%&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;ul&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    data=[&amp;#123;a:&quot;A&quot;,b:&quot;B&quot;,c:&#39;C&#39;&amp;#125;,&amp;#123;a:&quot;aa&quot;,b:&quot;bb&quot;,c:&#39;cc&#39;&amp;#125;,&amp;#123;a:&quot;aaa&quot;,b:&quot;bbb&quot;,c:&#39;ccc&#39;&amp;#125;];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    var boxHTML=$(&quot;#boxTemplate&quot;).html();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    var result=ejs.render(boxHTML,&amp;#123;boxData:data&amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	console.log(result);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	$(&quot;#box&quot;).html(result);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -63,7 +65,7 @@
     <link href="http://yoursite.com/2017/04/26/git/"/>
     <id>http://yoursite.com/2017/04/26/git/</id>
     <published>2017-04-26T02:36:16.000Z</published>
-    <updated>2017-07-26T15:58:51.247Z</updated>
+    <updated>2017-07-27T06:31:28.064Z</updated>
     
     <content type="html"><![CDATA[<h2 id="集中式和分布式版本控制系统"><a href="#集中式和分布式版本控制系统" class="headerlink" title="集中式和分布式版本控制系统"></a>集中式和分布式版本控制系统</h2><ul>
 <li>集中式版本控制系统的版本库是集中存放在中央服务器的，每次操作都要从中央服务器获取最新的版本，改动后将最新的版本推送到中央服务器。这种系统需要联网才能操作。集中式版本控制系统的代表有CVS,SVN等。</li>
@@ -77,6 +79,7 @@
 <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="查看git配置信息"><a href="#查看git配置信息" class="headerlink" title="查看git配置信息"></a>查看git配置信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --list</div></pre></td></tr></table></figure>
 <h4 id="配置账户名和邮箱"><a href="#配置账户名和邮箱" class="headerlink" title="配置账户名和邮箱"></a>配置账户名和邮箱</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name github账户名</div><div class="line">git config --global user.email github邮箱</div></pre></td></tr></table></figure>
 <p>可以合并一起写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global githufei 460284524@qq.com</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><p>进入文件夹，”shift+右键“打开cmd命令窗口或者Git bash。也可以通过cd（change Directory的缩写）命令切换当前路径。</p>
 <h3 id="创建目录和文件"><a href="#创建目录和文件" class="headerlink" title="创建目录和文件"></a>创建目录和文件</h3><ul>
 <li><p>创建一个文件夹，如mygit</p>
@@ -228,7 +231,17 @@
     <summary type="html">
     
       &lt;h2 id=&quot;集中式和分布式版本控制系统&quot;&gt;&lt;a href=&quot;#集中式和分布式版本控制系统&quot; class=&quot;headerlink&quot; title=&quot;集中式和分布式版本控制系统&quot;&gt;&lt;/a&gt;集中式和分布式版本控制系统&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;集中式版本控制系统的版本库是集中存放在中
+&lt;li&gt;集中式版本控制系统的版本库是集中存放在中央服务器的，每次操作都要从中央服务器获取最新的版本，改动后将最新的版本推送到中央服务器。这种系统需要联网才能操作。集中式版本控制系统的代表有CVS,SVN等。&lt;/li&gt;
+&lt;li&gt;分布式版本控制系统的不需要中央服务器，每个客户端都有一个完整的版本库。但在实际中，为了数据交换的方便，分布式版本控制系统通常也有一台充当“中央服务器”的电脑。和集中式不同的时，这台电脑的作用主要是为了交换数据，而不是存放版本。分布式版本控制系统代表Git。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;git准备阶段&quot;&gt;&lt;a href=&quot;#git准备阶段&quot; class=&quot;headerlink&quot; title=&quot;git准备阶段&quot;&gt;&lt;/a&gt;git准备阶段&lt;/h2&gt;&lt;h3 id=&quot;下载与安装&quot;&gt;&lt;a href=&quot;#下载与安装&quot; class=&quot;headerlink&quot; title=&quot;下载与安装&quot;&gt;&lt;/a&gt;下载与安装&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;下载地址&lt;a href=&quot;https://git-scm.com/downloads。&quot;&gt;https://git-scm.com/downloads。&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;git安装时选择在window下使用git并且在window下使用linux命令&lt;br&gt;安装完成后查看git版本号确定是否安装成功&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;git --version&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h3&gt;&lt;h4 id=&quot;查看git配置信息&quot;&gt;&lt;a href=&quot;#查看git配置信息&quot; class=&quot;headerlink&quot; title=&quot;查看git配置信息&quot;&gt;&lt;/a&gt;查看git配置信息&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;git config --list&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;配置账户名和邮箱&quot;&gt;&lt;a href=&quot;#配置账户名和邮箱&quot; class=&quot;headerlink&quot; title=&quot;配置账户名和邮箱&quot;&gt;&lt;/a&gt;配置账户名和邮箱&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;git config --global user.name github账户名&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;git config --global user.email github邮箱&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;可以合并一起写&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;git config --global githufei 460284524@qq.com&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
     </summary>
     
@@ -242,7 +255,7 @@
     <link href="http://yoursite.com/2017/04/25/%E5%9F%BA%E4%BA%8EGitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-%E4%BA%8C/"/>
     <id>http://yoursite.com/2017/04/25/基于GitHub搭建博客-二/</id>
     <published>2017-04-25T08:52:30.000Z</published>
-    <updated>2017-07-26T15:25:25.310Z</updated>
+    <updated>2017-07-27T06:32:07.546Z</updated>
     
     <content type="html"><![CDATA[<p>上面使用Hexo搭建了GitHub博客,接下来进行博客的配置和个性化设置。</p>
 <h2 id="博客的整体配置"><a href="#博客的整体配置" class="headerlink" title="博客的整体配置　　"></a>博客的整体配置　　</h2><p>博客的整体配置在<code>E:\Hexo\_config.yml</code>文件中进行。默认使用的主题是landscape，主题的配置在<code>E:\Hexo\themes\landscape\_config.yml</code>。主题的配置可以暂时不动，等到更换了自己满意的主题后再进行。先来说一下博客的整体配置，也就是打开<code>E:\Hexo\_config.yml</code>文件，更改里面的部分内容。简化起见，其他内容先不做更改，只更改#site下面的内容。</p>
@@ -250,6 +263,7 @@
 <p>更改完毕之后，启动本地预览，在浏览器中访问<code>localhost:4000</code>预览配置的效果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s</div></pre></td></tr></table></figure></p>
 <p>如果满意的话，同步到Github上:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div><div class="line">或者</div><div class="line">hexo d -g</div></pre></td></tr></table></figure></p>
 <h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>关于主题的选择，可以到Hexo官方主题页面选择自己喜欢的主题，也可以到Github上搜索别人制作的主题。<br>使用Hexo更换主题，先使用克隆命令安装好主题，然后更改一下博客的配置文件<code>E:\Hexo\_config.yml</code>里面的主题名称就好了。</p>
+<a id="more"></a>
 <h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>如安装yilia主题，在博客目录<code>E:\Hexo</code>下右键选择Git Bash,输入命令:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</div></pre></td></tr></table></figure>
 <h3 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h3><p>修改博客目录<code>E:\Hexo\_config.yml</code>中的theme属性，将其设置为yilia。</p>
@@ -261,7 +275,11 @@
     <summary type="html">
     
       &lt;p&gt;上面使用Hexo搭建了GitHub博客,接下来进行博客的配置和个性化设置。&lt;/p&gt;
-&lt;h2 id=&quot;博客的整体配置&quot;&gt;&lt;a href=&quot;#博客的整体配置&quot; class=&quot;headerlink&quot; title=&quot;博客的整体配置　　&quot;&gt;&lt;/a&gt;博客的整体配置　　&lt;/h2&gt;&lt;p&gt;博
+&lt;h2 id=&quot;博客的整体配置&quot;&gt;&lt;a href=&quot;#博客的整体配置&quot; class=&quot;headerlink&quot; title=&quot;博客的整体配置　　&quot;&gt;&lt;/a&gt;博客的整体配置　　&lt;/h2&gt;&lt;p&gt;博客的整体配置在&lt;code&gt;E:\Hexo\_config.yml&lt;/code&gt;文件中进行。默认使用的主题是landscape，主题的配置在&lt;code&gt;E:\Hexo\themes\landscape\_config.yml&lt;/code&gt;。主题的配置可以暂时不动，等到更换了自己满意的主题后再进行。先来说一下博客的整体配置，也就是打开&lt;code&gt;E:\Hexo\_config.yml&lt;/code&gt;文件，更改里面的部分内容。简化起见，其他内容先不做更改，只更改#site下面的内容。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;# Site&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;title: Github Blog #网站名称，会在标签页上显示&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;subtitle: #副标题&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;description: #网站描述&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;author: HuFei #作者&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;language: #语言&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;timezone:&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;更改完毕之后，启动本地预览，在浏览器中访问&lt;code&gt;localhost:4000&lt;/code&gt;预览配置的效果。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;hexo s&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;如果满意的话，同步到Github上:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;hexo g&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;hexo d&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;或者&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;hexo d -g&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;更换主题&quot;&gt;&lt;a href=&quot;#更换主题&quot; class=&quot;headerlink&quot; title=&quot;更换主题&quot;&gt;&lt;/a&gt;更换主题&lt;/h2&gt;&lt;p&gt;关于主题的选择，可以到Hexo官方主题页面选择自己喜欢的主题，也可以到Github上搜索别人制作的主题。&lt;br&gt;使用Hexo更换主题，先使用克隆命令安装好主题，然后更改一下博客的配置文件&lt;code&gt;E:\Hexo\_config.yml&lt;/code&gt;里面的主题名称就好了。&lt;/p&gt;
     
     </summary>
     
@@ -275,7 +293,7 @@
     <link href="http://yoursite.com/2017/04/25/%E5%9F%BA%E4%BA%8EGitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2017/04/25/基于GitHub搭建博客/</id>
     <published>2017-04-25T06:36:16.000Z</published>
-    <updated>2017-07-26T08:55:16.073Z</updated>
+    <updated>2017-07-27T06:32:46.238Z</updated>
     
     <content type="html"><![CDATA[<h2 id="搭建环境准备"><a href="#搭建环境准备" class="headerlink" title="搭建环境准备"></a>搭建环境准备</h2><ul>
 <li>Node.js 的安装和准备 </li>
@@ -305,6 +323,7 @@
 </ul>
 </li>
 </ul>
+<a id="more"></a>
 <h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><ul>
 <li>首先在E盘目录下创建Hexo文件夹，并在命令行的窗口进入到该目录</li>
 </ul>
@@ -385,7 +404,31 @@
       &lt;h2 id=&quot;搭建环境准备&quot;&gt;&lt;a href=&quot;#搭建环境准备&quot; class=&quot;headerlink&quot; title=&quot;搭建环境准备&quot;&gt;&lt;/a&gt;搭建环境准备&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;Node.js 的安装和准备 &lt;/li&gt;
 &lt;li&gt;Git的安装和准备 &lt;/li&gt;
-&lt;li&gt;git
+&lt;li&gt;gitHub账户的配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Node-js-的安装和准备&quot;&gt;&lt;a href=&quot;#Node-js-的安装和准备&quot; class=&quot;headerlink&quot; title=&quot;Node.js 的安装和准备&quot;&gt;&lt;/a&gt;Node.js 的安装和准备&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;1.下载node.js安装文件：&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;https://nodejs.org/en/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2.cmd，打开命令行界面,查看安装版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;node -v&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;npm -v&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;配置Git环境&quot;&gt;&lt;a href=&quot;#配置Git环境&quot; class=&quot;headerlink&quot; title=&quot;配置Git环境&quot;&gt;&lt;/a&gt;配置Git环境&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;下载Git安装文件：&lt;a href=&quot;https://git-scm.com/downloads&quot;&gt;https://git-scm.com/downloads&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;打开命令行输入,检查安装是否成功&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;git --version&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;github账户的注册和配置&quot;&gt;&lt;a href=&quot;#github账户的注册和配置&quot; class=&quot;headerlink&quot; title=&quot;github账户的注册和配置&quot;&gt;&lt;/a&gt;github账户的注册和配置&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Github注册：&lt;a href=&quot;https://github.com/&quot;&gt;https://github.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;创建代码库：&lt;/li&gt;
+&lt;li&gt;在Repository name下填写yourname.github.io，Description (optional)下填写一些简单的描述（不写也没有关系&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;注意：&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;比如我的github名称是githufei,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;这里你就填 githufei.github.io&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;代码库设置:Setting&lt;ul&gt;
+&lt;li&gt;接下来开启gh-pages功能，点击界面右侧的Settings，你将会打开这个库的setting页面，向下拖动，直到看见GitHub Pages&lt;/li&gt;
+&lt;li&gt;点击Automatic page generator，Github将会自动替你创建出一个gh-pages的页面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
