@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>js中的引用数据类型（二）和DOM操作 | Web前端开发</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="DOM 文档对象模型 DOM是Document Objet Model（文档对象模型）的缩写，它操作的顶级对象是document（文档对象） DOM可以操作元素及元素的内容、标签属性、文字、音频视频等等。（只要是直接写在文档中的，DOM都可以操作） DOM可以描述每个元素之间的关系图谱，例如xxx的父元素，xxx的子元素…DOM获取元素和样式DOM获取元素通过DOM获取元素的方式   获取元素的范">
-<meta name="keywords" content="js 数据类型 DOM">
+  <meta name="description" content="DOM 文档对象模型 DOM是Document Objet Model（文档对象模型）的缩写，它操作的顶级对象是document（文档对象） DOM可以操作元素及元素的内容、标签属性、文字、音频视频等等。（只要是直接写在文档中的，DOM都可以操作） DOM可以描述每个元素之间的关系图谱，例如xxx的父元素，xxx的子元素…DOM获取元素和样式DOM获取元素通过DOM获取元素的方式 获取元素的范围.">
+<meta name="keywords" content="js,数据类型,DOM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js中的引用数据类型（二）和DOM操作">
 <meta property="og:url" content="http://yoursite.com/2017/04/25/4.js中的引用数据类型(2)和DOM操作/index.html">
 <meta property="og:site_name" content="Web前端开发">
-<meta property="og:description" content="DOM 文档对象模型 DOM是Document Objet Model（文档对象模型）的缩写，它操作的顶级对象是document（文档对象） DOM可以操作元素及元素的内容、标签属性、文字、音频视频等等。（只要是直接写在文档中的，DOM都可以操作） DOM可以描述每个元素之间的关系图谱，例如xxx的父元素，xxx的子元素…DOM获取元素和样式DOM获取元素通过DOM获取元素的方式   获取元素的范">
-<meta property="og:updated_time" content="2017-08-14T01:56:33.641Z">
+<meta property="og:description" content="DOM 文档对象模型 DOM是Document Objet Model（文档对象模型）的缩写，它操作的顶级对象是document（文档对象） DOM可以操作元素及元素的内容、标签属性、文字、音频视频等等。（只要是直接写在文档中的，DOM都可以操作） DOM可以描述每个元素之间的关系图谱，例如xxx的父元素，xxx的子元素…DOM获取元素和样式DOM获取元素通过DOM获取元素的方式 获取元素的范围.">
+<meta property="og:updated_time" content="2017-08-14T08:46:51.246Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js中的引用数据类型（二）和DOM操作">
-<meta name="twitter:description" content="DOM 文档对象模型 DOM是Document Objet Model（文档对象模型）的缩写，它操作的顶级对象是document（文档对象） DOM可以操作元素及元素的内容、标签属性、文字、音频视频等等。（只要是直接写在文档中的，DOM都可以操作） DOM可以描述每个元素之间的关系图谱，例如xxx的父元素，xxx的子元素…DOM获取元素和样式DOM获取元素通过DOM获取元素的方式   获取元素的范">
+<meta name="twitter:description" content="DOM 文档对象模型 DOM是Document Objet Model（文档对象模型）的缩写，它操作的顶级对象是document（文档对象） DOM可以操作元素及元素的内容、标签属性、文字、音频视频等等。（只要是直接写在文档中的，DOM都可以操作） DOM可以描述每个元素之间的关系图谱，例如xxx的父元素，xxx的子元素…DOM获取元素和样式DOM获取元素通过DOM获取元素的方式 获取元素的范围.">
   
     <link rel="alternative" href="/atom.xml" title="Web前端开发" type="application/atom+xml">
   
@@ -200,8 +200,6 @@
 <li>DOM是Document Objet Model（文档对象模型）的缩写，它操作的顶级对象是document（文档对象）</li>
 <li>DOM可以操作元素及元素的内容、标签属性、文字、音频视频等等。（只要是直接写在文档中的，DOM都可以操作）</li>
 <li>DOM可以描述每个元素之间的关系图谱，例如xxx的父元素，xxx的子元素…<h2 id="DOM获取元素和样式"><a href="#DOM获取元素和样式" class="headerlink" title="DOM获取元素和样式"></a>DOM获取元素和样式</h2><h3 id="DOM获取元素"><a href="#DOM获取元素" class="headerlink" title="DOM获取元素"></a>DOM获取元素</h3><h4 id="通过DOM获取元素的方式"><a href="#通过DOM获取元素的方式" class="headerlink" title="通过DOM获取元素的方式"></a>通过DOM获取元素的方式</h4></li>
-</ul>
-<ol>
 <li><strong>获取元素的范围.querySelector(“value”)</strong><ul>
 <li>通过选择器获取元素</li>
 <li>传入的value值与css选择器相同，可以写类、id、标签、后代选择器、子代选择器</li>
@@ -219,7 +217,7 @@
 <li>通过id获取一个元素，获取范围只能是document</li>
 <li>如果一个页面有多个id名称相同的元素，只获取第一个</li>
 <li>在ie67中，会将表单元素的name属性值当作id名称来调取，并且不区分大小写</li>
-<li>可以直接使用元素的id来调取元素（不推荐使用）</li>
+<li>可以直接使用元素的id来调取元素（不推荐使用）<a id="more"></a></li>
 </ul>
 </li>
 <li><strong>document.getElementsByName(“name名字”)</strong><ul>
@@ -257,7 +255,7 @@
 <li>document.querySelectorAll(“tab li”);<br>p.s：jq中的选择器参考css选择器的规则</li>
 </ul>
 </li>
-</ol>
+</ul>
 <blockquote>
 <p>通过Id和querySelector获取到的是一个元素（Element），通过ClassName、TagName、querySelectorAll获取到的是一组元素（Elements）。对于一组元素，如果要操作其中的一项，通过索引来指定。</p>
 <p>注意：不能改变关键字的大小写</p>
@@ -512,7 +510,7 @@ undefined
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">js 数据类型 DOM</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">js,数据类型,DOM</a>
         		</li>
       		
 		</ul>
@@ -582,11 +580,11 @@ undefined
   
 <nav id="article-nav">
   
-    <a href="/2017/04/25/note/3.js中的引用数据类型/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/04/25/基于GitHub搭建博客-二/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          js中的引用数据类型
+          使用Hexo搭建GitHub博客(二)
         
       </div>
     </a>
@@ -760,6 +758,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">js 数据类型 DOM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js,js基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">js,js数据类型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">js,数据类型,DOM</a>
               </li>
             
             <div class="clearfix"></div>
