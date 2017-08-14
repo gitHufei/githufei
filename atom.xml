@@ -61,49 +61,11 @@
   </entry>
   
   <entry>
-    <title>使用Hexo搭建GitHub博客(二)</title>
-    <link href="http://yoursite.com/2017/04/25/%E5%9F%BA%E4%BA%8EGitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-%E4%BA%8C/"/>
-    <id>http://yoursite.com/2017/04/25/基于GitHub搭建博客-二/</id>
-    <published>2017-04-25T08:52:30.000Z</published>
-    <updated>2017-07-27T06:32:07.546Z</updated>
-    
-    <content type="html"><![CDATA[<p>上面使用Hexo搭建了GitHub博客,接下来进行博客的配置和个性化设置。</p>
-<h2 id="博客的整体配置"><a href="#博客的整体配置" class="headerlink" title="博客的整体配置　　"></a>博客的整体配置　　</h2><p>博客的整体配置在<code>E:\Hexo\_config.yml</code>文件中进行。默认使用的主题是landscape，主题的配置在<code>E:\Hexo\themes\landscape\_config.yml</code>。主题的配置可以暂时不动，等到更换了自己满意的主题后再进行。先来说一下博客的整体配置，也就是打开<code>E:\Hexo\_config.yml</code>文件，更改里面的部分内容。简化起见，其他内容先不做更改，只更改#site下面的内容。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># Site</div><div class="line">title: Github Blog #网站名称，会在标签页上显示</div><div class="line">subtitle: #副标题</div><div class="line">description: #网站描述</div><div class="line">author: HuFei #作者</div><div class="line">language: #语言</div><div class="line">timezone:</div></pre></td></tr></table></figure>
-<p>更改完毕之后，启动本地预览，在浏览器中访问<code>localhost:4000</code>预览配置的效果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s</div></pre></td></tr></table></figure></p>
-<p>如果满意的话，同步到Github上:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div><div class="line">或者</div><div class="line">hexo d -g</div></pre></td></tr></table></figure></p>
-<h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>关于主题的选择，可以到Hexo官方主题页面选择自己喜欢的主题，也可以到Github上搜索别人制作的主题。<br>使用Hexo更换主题，先使用克隆命令安装好主题，然后更改一下博客的配置文件<code>E:\Hexo\_config.yml</code>里面的主题名称就好了。</p>
-<a id="more"></a>
-<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>如安装yilia主题，在博客目录<code>E:\Hexo</code>下右键选择Git Bash,输入命令:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</div></pre></td></tr></table></figure>
-<h3 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h3><p>修改博客目录<code>E:\Hexo\_config.yml</code>中的theme属性，将其设置为yilia。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: yilia</div></pre></td></tr></table></figure>
-<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>主题的配置在themes文件夹下的<code>_config.yml</code>中进行.<br><code>E:\Hexo\themes\yilia\_config.yml</code>文件里面了。一般而言，主题的作者都会有对主题的相关介绍，看他介绍的修改就可以了。<br>提醒一点，主题中配置的头像等图片资源文件的路径是以source文件夹为路径的。</p>
-<h3 id="将配置同步到Github"><a href="#将配置同步到Github" class="headerlink" title="将配置同步到Github"></a>将配置同步到Github</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git d -g</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;上面使用Hexo搭建了GitHub博客,接下来进行博客的配置和个性化设置。&lt;/p&gt;
-&lt;h2 id=&quot;博客的整体配置&quot;&gt;&lt;a href=&quot;#博客的整体配置&quot; class=&quot;headerlink&quot; title=&quot;博客的整体配置　　&quot;&gt;&lt;/a&gt;博客的整体配置　　&lt;/h2&gt;&lt;p&gt;博客的整体配置在&lt;code&gt;E:\Hexo\_config.yml&lt;/code&gt;文件中进行。默认使用的主题是landscape，主题的配置在&lt;code&gt;E:\Hexo\themes\landscape\_config.yml&lt;/code&gt;。主题的配置可以暂时不动，等到更换了自己满意的主题后再进行。先来说一下博客的整体配置，也就是打开&lt;code&gt;E:\Hexo\_config.yml&lt;/code&gt;文件，更改里面的部分内容。简化起见，其他内容先不做更改，只更改#site下面的内容。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;# Site&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;title: Github Blog #网站名称，会在标签页上显示&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;subtitle: #副标题&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;description: #网站描述&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;author: HuFei #作者&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;language: #语言&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;timezone:&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;更改完毕之后，启动本地预览，在浏览器中访问&lt;code&gt;localhost:4000&lt;/code&gt;预览配置的效果。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;hexo s&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;如果满意的话，同步到Github上:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;hexo g&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;hexo d&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;或者&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;hexo d -g&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&quot;更换主题&quot;&gt;&lt;a href=&quot;#更换主题&quot; class=&quot;headerlink&quot; title=&quot;更换主题&quot;&gt;&lt;/a&gt;更换主题&lt;/h2&gt;&lt;p&gt;关于主题的选择，可以到Hexo官方主题页面选择自己喜欢的主题，也可以到Github上搜索别人制作的主题。&lt;br&gt;使用Hexo更换主题，先使用克隆命令安装好主题，然后更改一下博客的配置文件&lt;code&gt;E:\Hexo\_config.yml&lt;/code&gt;里面的主题名称就好了。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>js中的引用数据类型（二）和DOM操作</title>
     <link href="http://yoursite.com/2017/04/25/4.js%E4%B8%AD%E7%9A%84%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B(2)%E5%92%8CDOM%E6%93%8D%E4%BD%9C/"/>
     <id>http://yoursite.com/2017/04/25/4.js中的引用数据类型(2)和DOM操作/</id>
     <published>2017-04-25T08:52:30.000Z</published>
-    <updated>2017-08-14T08:51:14.582Z</updated>
+    <updated>2017-08-14T08:57:24.102Z</updated>
     
     <content type="html"><![CDATA[<h1 id="DOM-文档对象模型"><a href="#DOM-文档对象模型" class="headerlink" title="DOM 文档对象模型"></a>DOM 文档对象模型</h1><ul>
 <li>DOM是Document Objet Model（文档对象模型）的缩写，它操作的顶级对象是document（文档对象）</li>
@@ -140,7 +102,7 @@
 <li>通过元素的类名获取一组元素，获取到的是一个集合</li>
 <li>在ie67中不兼容</li>
 <li>通过[索引]的方式获取集合中的某一个</li>
-<li>获取的范围可以自定义，一般是所获取元素的父级，最多不超过三级<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var list=document.getElementsByClassName(&apos;list&apos;);//获取到的是整个文档中所有类名叫做list的元素</div><div class="line">var cur=list[0];//获取到的是这个集合中的第1个元素</div></pre></td></tr></table></figure>
+<li>获取的范围可以自定义，一般是所获取元素的父级，最多不超过三级<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> list=<span class="built_in">document</span>.getElementsByClassName(<span class="string">'list'</span>);<span class="comment">//获取到的是整个文档中所有类名叫做list的元素</span></div><div class="line"><span class="keyword">var</span> cur=list[<span class="number">0</span>];<span class="comment">//获取到的是这个集合中的第1个元素</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -154,14 +116,14 @@
 <li><strong>document.documentElement</strong>获取文档的根元素（rootelement）</li>
 <li><strong>document.body</strong>获取文档的body元素</li>
 <li><strong>获取当前页面的宽度和高度</strong><ul>
-<li>document.documentElement.clientWidth  ||  document.body.clientWidth</li>
-<li>document.documentElement.clientHeight  ||  document.body.clientHeight</li>
+<li><code>document.documentElement.clientWidth  ||  document.body.clientWidth</code></li>
+<li><code>document.documentElement.clientHeight  ||  document.body.clientHeight</code></li>
 </ul>
 </li>
 <li>在移动端我们获取元素常用的方法（ie678不兼容）<ul>
-<li>document.querySelector(“id”);//获取一个</li>
-<li>document.querySelectorAll(“.class”);//获取一组</li>
-<li>document.querySelectorAll(“tab li”);<br>p.s：jq中的选择器参考css选择器的规则</li>
+<li><code>document.querySelector(&quot;id&quot;);//获取一个</code></li>
+<li><code>document.querySelectorAll(&quot;.class&quot;);//获取一组</code></li>
+<li><code>document.querySelectorAll(&quot;tab li&quot;);</code><br>p.s：jq中的选择器参考css选择器的规则</li>
 </ul>
 </li>
 </ul>
@@ -405,7 +367,11 @@ undefined
     </summary>
     
     
-      <category term="js;数据类型;DOM" scheme="http://yoursite.com/tags/js-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-DOM/"/>
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+      <category term="数据类型" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+      <category term="DOM" scheme="http://yoursite.com/tags/DOM/"/>
     
   </entry>
   
@@ -414,7 +380,7 @@ undefined
     <link href="http://yoursite.com/2017/04/25/3.js%E4%B8%AD%E7%9A%84%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
     <id>http://yoursite.com/2017/04/25/3.js中的引用数据类型/</id>
     <published>2017-04-25T08:52:30.000Z</published>
-    <updated>2017-08-14T08:51:03.954Z</updated>
+    <updated>2017-08-14T08:55:56.343Z</updated>
     
     <content type="html"><![CDATA[<h2 id="object对象"><a href="#object对象" class="headerlink" title="object对象"></a>object对象</h2><p>js中引用数据类型分为对象数据类型和函数数据类型。<br>对象数据类型：</p>
 <ul>
@@ -710,7 +676,9 @@ __proto__:Object
     </summary>
     
     
-      <category term="js;js数据类型" scheme="http://yoursite.com/tags/js-js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+      <category term="js数据类型" scheme="http://yoursite.com/tags/js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
     
   </entry>
   
@@ -868,7 +836,7 @@ __proto__:Object
     <link href="http://yoursite.com/2017/04/02/1.js%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     <id>http://yoursite.com/2017/04/02/1.js基础知识/</id>
     <published>2017-04-02T08:52:30.000Z</published>
-    <updated>2017-08-14T08:50:50.358Z</updated>
+    <updated>2017-08-14T08:56:10.337Z</updated>
     
     <content type="html"><![CDATA[<h1 id="了解JS"><a href="#了解JS" class="headerlink" title="了解JS"></a>了解JS</h1><ul>
 <li>全称JavaScript</li>
@@ -1006,7 +974,9 @@ __proto__:Object
     </summary>
     
     
-      <category term="js;js基础" scheme="http://yoursite.com/tags/js-js%E5%9F%BA%E7%A1%80/"/>
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+      <category term="js基础" scheme="http://yoursite.com/tags/js%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -1181,6 +1151,44 @@ __proto__:Object
     
     
       <category term="js;js数据类型" scheme="http://yoursite.com/tags/js-js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Hexo搭建GitHub博客(二)</title>
+    <link href="http://yoursite.com/2017/03/30/%E5%9F%BA%E4%BA%8EGitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-%E4%BA%8C/"/>
+    <id>http://yoursite.com/2017/03/30/基于GitHub搭建博客-二/</id>
+    <published>2017-03-30T08:52:30.000Z</published>
+    <updated>2017-08-14T08:58:08.820Z</updated>
+    
+    <content type="html"><![CDATA[<p>上面使用Hexo搭建了GitHub博客,接下来进行博客的配置和个性化设置。</p>
+<h2 id="博客的整体配置"><a href="#博客的整体配置" class="headerlink" title="博客的整体配置　　"></a>博客的整体配置　　</h2><p>博客的整体配置在<code>E:\Hexo\_config.yml</code>文件中进行。默认使用的主题是landscape，主题的配置在<code>E:\Hexo\themes\landscape\_config.yml</code>。主题的配置可以暂时不动，等到更换了自己满意的主题后再进行。先来说一下博客的整体配置，也就是打开<code>E:\Hexo\_config.yml</code>文件，更改里面的部分内容。简化起见，其他内容先不做更改，只更改#site下面的内容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># Site</div><div class="line">title: Github Blog #网站名称，会在标签页上显示</div><div class="line">subtitle: #副标题</div><div class="line">description: #网站描述</div><div class="line">author: HuFei #作者</div><div class="line">language: #语言</div><div class="line">timezone:</div></pre></td></tr></table></figure>
+<p>更改完毕之后，启动本地预览，在浏览器中访问<code>localhost:4000</code>预览配置的效果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s</div></pre></td></tr></table></figure></p>
+<p>如果满意的话，同步到Github上:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div><div class="line">或者</div><div class="line">hexo d -g</div></pre></td></tr></table></figure></p>
+<h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>关于主题的选择，可以到Hexo官方主题页面选择自己喜欢的主题，也可以到Github上搜索别人制作的主题。<br>使用Hexo更换主题，先使用克隆命令安装好主题，然后更改一下博客的配置文件<code>E:\Hexo\_config.yml</code>里面的主题名称就好了。</p>
+<a id="more"></a>
+<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>如安装yilia主题，在博客目录<code>E:\Hexo</code>下右键选择Git Bash,输入命令:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</div></pre></td></tr></table></figure>
+<h3 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h3><p>修改博客目录<code>E:\Hexo\_config.yml</code>中的theme属性，将其设置为yilia。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: yilia</div></pre></td></tr></table></figure>
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>主题的配置在themes文件夹下的<code>_config.yml</code>中进行.<br><code>E:\Hexo\themes\yilia\_config.yml</code>文件里面了。一般而言，主题的作者都会有对主题的相关介绍，看他介绍的修改就可以了。<br>提醒一点，主题中配置的头像等图片资源文件的路径是以source文件夹为路径的。</p>
+<h3 id="将配置同步到Github"><a href="#将配置同步到Github" class="headerlink" title="将配置同步到Github"></a>将配置同步到Github</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git d -g</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;上面使用Hexo搭建了GitHub博客,接下来进行博客的配置和个性化设置。&lt;/p&gt;
+&lt;h2 id=&quot;博客的整体配置&quot;&gt;&lt;a href=&quot;#博客的整体配置&quot; class=&quot;headerlink&quot; title=&quot;博客的整体配置　　&quot;&gt;&lt;/a&gt;博客的整体配置　　&lt;/h2&gt;&lt;p&gt;博客的整体配置在&lt;code&gt;E:\Hexo\_config.yml&lt;/code&gt;文件中进行。默认使用的主题是landscape，主题的配置在&lt;code&gt;E:\Hexo\themes\landscape\_config.yml&lt;/code&gt;。主题的配置可以暂时不动，等到更换了自己满意的主题后再进行。先来说一下博客的整体配置，也就是打开&lt;code&gt;E:\Hexo\_config.yml&lt;/code&gt;文件，更改里面的部分内容。简化起见，其他内容先不做更改，只更改#site下面的内容。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;# Site&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;title: Github Blog #网站名称，会在标签页上显示&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;subtitle: #副标题&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;description: #网站描述&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;author: HuFei #作者&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;language: #语言&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;timezone:&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;更改完毕之后，启动本地预览，在浏览器中访问&lt;code&gt;localhost:4000&lt;/code&gt;预览配置的效果。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;hexo s&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;如果满意的话，同步到Github上:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;hexo g&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;hexo d&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;或者&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;hexo d -g&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;更换主题&quot;&gt;&lt;a href=&quot;#更换主题&quot; class=&quot;headerlink&quot; title=&quot;更换主题&quot;&gt;&lt;/a&gt;更换主题&lt;/h2&gt;&lt;p&gt;关于主题的选择，可以到Hexo官方主题页面选择自己喜欢的主题，也可以到Github上搜索别人制作的主题。&lt;br&gt;使用Hexo更换主题，先使用克隆命令安装好主题，然后更改一下博客的配置文件&lt;code&gt;E:\Hexo\_config.yml&lt;/code&gt;里面的主题名称就好了。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
   </entry>
   

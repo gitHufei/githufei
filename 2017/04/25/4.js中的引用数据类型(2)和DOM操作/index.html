@@ -9,13 +9,13 @@
   <title>js中的引用数据类型（二）和DOM操作 | Web前端开发</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="DOM 文档对象模型 DOM是Document Objet Model（文档对象模型）的缩写，它操作的顶级对象是document（文档对象） DOM可以操作元素及元素的内容、标签属性、文字、音频视频等等。（只要是直接写在文档中的，DOM都可以操作） DOM可以描述每个元素之间的关系图谱，例如xxx的父元素，xxx的子元素…DOM获取元素和样式DOM获取元素通过DOM获取元素的方式 获取元素的范围.">
-<meta name="keywords" content="js;数据类型;DOM">
+<meta name="keywords" content="js,数据类型,DOM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js中的引用数据类型（二）和DOM操作">
 <meta property="og:url" content="http://yoursite.com/2017/04/25/4.js中的引用数据类型(2)和DOM操作/index.html">
 <meta property="og:site_name" content="Web前端开发">
 <meta property="og:description" content="DOM 文档对象模型 DOM是Document Objet Model（文档对象模型）的缩写，它操作的顶级对象是document（文档对象） DOM可以操作元素及元素的内容、标签属性、文字、音频视频等等。（只要是直接写在文档中的，DOM都可以操作） DOM可以描述每个元素之间的关系图谱，例如xxx的父元素，xxx的子元素…DOM获取元素和样式DOM获取元素通过DOM获取元素的方式 获取元素的范围.">
-<meta property="og:updated_time" content="2017-08-14T08:51:14.582Z">
+<meta property="og:updated_time" content="2017-08-14T08:57:24.102Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js中的引用数据类型（二）和DOM操作">
 <meta name="twitter:description" content="DOM 文档对象模型 DOM是Document Objet Model（文档对象模型）的缩写，它操作的顶级对象是document（文档对象） DOM可以操作元素及元素的内容、标签属性、文字、音频视频等等。（只要是直接写在文档中的，DOM都可以操作） DOM可以描述每个元素之间的关系图谱，例如xxx的父元素，xxx的子元素…DOM获取元素和样式DOM获取元素通过DOM获取元素的方式 获取元素的范围.">
@@ -231,7 +231,7 @@
 <li>通过元素的类名获取一组元素，获取到的是一个集合</li>
 <li>在ie67中不兼容</li>
 <li>通过[索引]的方式获取集合中的某一个</li>
-<li>获取的范围可以自定义，一般是所获取元素的父级，最多不超过三级<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var list=document.getElementsByClassName(&apos;list&apos;);//获取到的是整个文档中所有类名叫做list的元素</div><div class="line">var cur=list[0];//获取到的是这个集合中的第1个元素</div></pre></td></tr></table></figure>
+<li>获取的范围可以自定义，一般是所获取元素的父级，最多不超过三级<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> list=<span class="built_in">document</span>.getElementsByClassName(<span class="string">'list'</span>);<span class="comment">//获取到的是整个文档中所有类名叫做list的元素</span></div><div class="line"><span class="keyword">var</span> cur=list[<span class="number">0</span>];<span class="comment">//获取到的是这个集合中的第1个元素</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -245,14 +245,14 @@
 <li><strong>document.documentElement</strong>获取文档的根元素（rootelement）</li>
 <li><strong>document.body</strong>获取文档的body元素</li>
 <li><strong>获取当前页面的宽度和高度</strong><ul>
-<li>document.documentElement.clientWidth  ||  document.body.clientWidth</li>
-<li>document.documentElement.clientHeight  ||  document.body.clientHeight</li>
+<li><code>document.documentElement.clientWidth  ||  document.body.clientWidth</code></li>
+<li><code>document.documentElement.clientHeight  ||  document.body.clientHeight</code></li>
 </ul>
 </li>
 <li>在移动端我们获取元素常用的方法（ie678不兼容）<ul>
-<li>document.querySelector(“id”);//获取一个</li>
-<li>document.querySelectorAll(“.class”);//获取一组</li>
-<li>document.querySelectorAll(“tab li”);<br>p.s：jq中的选择器参考css选择器的规则</li>
+<li><code>document.querySelector(&quot;id&quot;);//获取一个</code></li>
+<li><code>document.querySelectorAll(&quot;.class&quot;);//获取一组</code></li>
+<li><code>document.querySelectorAll(&quot;tab li&quot;);</code><br>p.s：jq中的选择器参考css选择器的规则</li>
 </ul>
 </li>
 </ul>
@@ -510,7 +510,15 @@ undefined
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">js;数据类型;DOM</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据类型</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DOM</a>
         		</li>
       		
 		</ul>
@@ -580,11 +588,11 @@ undefined
   
 <nav id="article-nav">
   
-    <a href="/2017/04/25/基于GitHub搭建博客-二/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/04/25/基于GitHub搭建博客/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          使用Hexo搭建GitHub博客(二)
+          使用Hexo搭建GitHub博客
         
       </div>
     </a>
@@ -782,6 +790,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">js;数据类型;DOM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">js基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">js数据类型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据类型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">DOM</a>
               </li>
             
             <div class="clearfix"></div>
