@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>使用Hexo搭建GitHub博客 | Web前端开发</title>
+  <title>js中的引用数据类型 | Web前端开发</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="搭建环境准备 Node.js 的安装和准备  Git的安装和准备  gitHub账户的配置  Node.js 的安装和准备 1.下载node.js安装文件：https://nodejs.org/en/ 2.cmd，打开命令行界面,查看安装版本  12node -vnpm -v 配置Git环境 下载Git安装文件：https://git-scm.com/downloads 打开命令行输入,检查安装是">
-<meta name="keywords" content="hexo">
+  <meta name="description" content="object对象js中引用数据类型分为对象数据类型和函数数据类型。对象数据类型：  数组类Array 对象类Object 数学类Math 正则类RegExp 时间类Date  Object是引用数据类型中的对象类，每一个我们使用的具体对象都是这个类的一个实例。 对象类中的实例都是有键值对组成的（属性名和属性值），键值对是用来描述这个对象特征的。 如何在js中创建一个对象实例：  字面量创建  对象">
+<meta name="keywords" content="js js数据类型">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Hexo搭建GitHub博客">
-<meta property="og:url" content="http://yoursite.com/2017/04/25/基于GitHub搭建博客/index.html">
+<meta property="og:title" content="js中的引用数据类型">
+<meta property="og:url" content="http://yoursite.com/2017/04/25/note/3.js中的引用数据类型/index.html">
 <meta property="og:site_name" content="Web前端开发">
-<meta property="og:description" content="搭建环境准备 Node.js 的安装和准备  Git的安装和准备  gitHub账户的配置  Node.js 的安装和准备 1.下载node.js安装文件：https://nodejs.org/en/ 2.cmd，打开命令行界面,查看安装版本  12node -vnpm -v 配置Git环境 下载Git安装文件：https://git-scm.com/downloads 打开命令行输入,检查安装是">
-<meta property="og:updated_time" content="2017-07-27T06:32:46.238Z">
+<meta property="og:description" content="object对象js中引用数据类型分为对象数据类型和函数数据类型。对象数据类型：  数组类Array 对象类Object 数学类Math 正则类RegExp 时间类Date  Object是引用数据类型中的对象类，每一个我们使用的具体对象都是这个类的一个实例。 对象类中的实例都是有键值对组成的（属性名和属性值），键值对是用来描述这个对象特征的。 如何在js中创建一个对象实例：  字面量创建  对象">
+<meta property="og:updated_time" content="2017-08-14T01:32:45.211Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Hexo搭建GitHub博客">
-<meta name="twitter:description" content="搭建环境准备 Node.js 的安装和准备  Git的安装和准备  gitHub账户的配置  Node.js 的安装和准备 1.下载node.js安装文件：https://nodejs.org/en/ 2.cmd，打开命令行界面,查看安装版本  12node -vnpm -v 配置Git环境 下载Git安装文件：https://git-scm.com/downloads 打开命令行输入,检查安装是">
+<meta name="twitter:title" content="js中的引用数据类型">
+<meta name="twitter:description" content="object对象js中引用数据类型分为对象数据类型和函数数据类型。对象数据类型：  数组类Array 对象类Object 数学类Math 正则类RegExp 时间类Date  Object是引用数据类型中的对象类，每一个我们使用的具体对象都是这个类的一个实例。 对象类中的实例都是有键值对组成的（属性名和属性值），键值对是用来描述这个对象特征的。 如何在js中创建一个对象实例：  字面量创建  对象">
   
     <link rel="alternative" href="/atom.xml" title="Web前端开发" type="application/atom+xml">
   
@@ -176,128 +176,297 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-基于GitHub搭建博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-note/3.js中的引用数据类型" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      使用Hexo搭建GitHub博客
+      js中的引用数据类型
     </h1>
   
 
         
-        <a href="/2017/04/25/基于GitHub搭建博客/" class="archive-article-date">
-  	<time datetime="2017-04-25T06:36:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-25</time>
+        <a href="/2017/04/25/note/3.js中的引用数据类型/" class="archive-article-date">
+  	<time datetime="2017-04-25T08:52:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="搭建环境准备"><a href="#搭建环境准备" class="headerlink" title="搭建环境准备"></a>搭建环境准备</h2><ul>
-<li>Node.js 的安装和准备 </li>
-<li>Git的安装和准备 </li>
-<li>gitHub账户的配置</li>
-</ul>
-<h3 id="Node-js-的安装和准备"><a href="#Node-js-的安装和准备" class="headerlink" title="Node.js 的安装和准备"></a>Node.js 的安装和准备</h3><ul>
-<li>1.下载node.js安装文件：<a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a></li>
-<li>2.cmd，打开命令行界面,查看安装版本</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">node -v</div><div class="line">npm -v</div></pre></td></tr></table></figure>
-<h3 id="配置Git环境"><a href="#配置Git环境" class="headerlink" title="配置Git环境"></a>配置Git环境</h3><ul>
-<li>下载Git安装文件：<a href="https://git-scm.com/downloads" target="_blank" rel="external">https://git-scm.com/downloads</a></li>
-<li>打开命令行输入,检查安装是否成功</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git --version</div></pre></td></tr></table></figure>
-<h3 id="github账户的注册和配置"><a href="#github账户的注册和配置" class="headerlink" title="github账户的注册和配置"></a>github账户的注册和配置</h3><ul>
-<li>Github注册：<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a></li>
-<li>创建代码库：</li>
-<li>在Repository name下填写yourname.github.io，Description (optional)下填写一些简单的描述（不写也没有关系</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">注意：</div><div class="line">比如我的github名称是githufei,</div><div class="line">这里你就填 githufei.github.io</div></pre></td></tr></table></figure>
+        <h2 id="object对象"><a href="#object对象" class="headerlink" title="object对象"></a>object对象</h2><p>js中引用数据类型分为对象数据类型和函数数据类型。<br>对象数据类型：</p>
 <ul>
-<li>代码库设置:Setting<ul>
-<li>接下来开启gh-pages功能，点击界面右侧的Settings，你将会打开这个库的setting页面，向下拖动，直到看见GitHub Pages</li>
-<li>点击Automatic page generator，Github将会自动替你创建出一个gh-pages的页面</li>
+<li>数组类Array</li>
+<li>对象类Object</li>
+<li>数学类Math</li>
+<li>正则类RegExp</li>
+<li>时间类Date</li>
 </ul>
-</li>
-</ul>
-<a id="more"></a>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><ul>
-<li>首先在E盘目录下创建Hexo文件夹，并在命令行的窗口进入到该目录</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">E:    进入E盘</div><div class="line">cd Hexo 进入Hexo文件夹</div></pre></td></tr></table></figure>
+<p>Object是引用数据类型中的对象类，每一个我们使用的具体对象都是这个类的一个实例。</p>
+<p>对象类中的实例都是有键值对组成的（属性名和属性值），键值对是用来描述这个对象特征的。</p>
+<p>如何在js中创建一个对象实例：</p>
 <ul>
-<li>安装HEXO</li>
+<li>字面量创建 </li>
+<li><p>对象名={属性名1：属性值1，属性名2：属性值2}</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj=&#123;</div><div class="line">	<span class="attr">name</span>:value,</div><div class="line">	<span class="attr">name2</span>:value2</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>实例创建 ，在该类上新建一个实例</p>
+</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure>
-<p>可能你会看到一个WARN，但是不用担心，这不会影响你的正常使用。 然后输入</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj=<span class="keyword">new</span> <span class="built_in">Object</span>();<span class="comment">//括号可以省略</span></div></pre></td></tr></table></figure>
 <ul>
-<li>保存hexo</li>
+<li>对对象进行查增改删等操作可以有两种写法：<ul>
+<li>对象名.属性名</li>
+<li>对象名[“属性名”]<br>注意：使用第二种写法时，必须加双引号；如果属性名为数字，只能用第二种写法，并且双引号可以省略。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a=<span class="number">1</span>,b=<span class="number">2</span>;</div><div class="line"><span class="keyword">var</span> obj=&#123;</div><div class="line">	<span class="attr">a</span>:<span class="string">"a"</span>,</div><div class="line">	<span class="attr">b</span>:<span class="number">12</span>,</div><div class="line">	<span class="attr">c</span>:a</div><div class="line">&#125;;</div><div class="line">obj[<span class="string">"a"</span>]=b;  <span class="comment">//a为属性名，b为变量（值为2），修改属性a的属性值为2，→a:2 </span></div><div class="line">obj[a]=b;  <span class="comment">//a为变量（值为1），b为变量（值为2），增加属性名为1，属性值为2→1:2</span></div><div class="line">obj.c=a;  <span class="comment">//c为属性名，a为变量（值为2）→c:2</span></div><div class="line"><span class="built_in">console</span>.log(obj);</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo -save</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>输出结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1：2</div><div class="line">a：2</div><div class="line">b：12</div><div class="line">c：2</div></pre></td></tr></table></figure>
 <ul>
-<li>检查安装是否成功</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo -v</div></pre></td></tr></table></figure>
-<h2 id="hexo的相关配置"><a href="#hexo的相关配置" class="headerlink" title="hexo的相关配置"></a>hexo的相关配置</h2><h3 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo init</div><div class="line">npm install</div></pre></td></tr></table></figure>
-<h3 id="首次体验Hexo"><a href="#首次体验Hexo" class="headerlink" title="首次体验Hexo"></a>首次体验Hexo</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g   #生成</div><div class="line">hexo s   #启动服务</div></pre></td></tr></table></figure>
-<p>在浏览器中打开<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></p>
-<h2 id="怎样将Hexo与github-page-联系起来"><a href="#怎样将Hexo与github-page-联系起来" class="headerlink" title="怎样将Hexo与github page 联系起来"></a>怎样将Hexo与github page 联系起来</h2><p>大概分为以下几步</p>
+<li><p>访问对象——查找：</p>
 <ul>
-<li>配置git个人信息 </li>
-<li>配置Deployment</li>
+<li>对象名.属性名</li>
+<li>对象名[“属性名”]</li>
 </ul>
-<h3 id="配置Git个人信息"><a href="#配置Git个人信息" class="headerlink" title="配置Git个人信息"></a>配置Git个人信息</h3><ul>
-<li><p>1.设置Git的user name和email：(如果是第一次的话)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;githufei&quot;</div><div class="line">git config --global user.email &quot;460284524@qq.com&quot;</div></pre></td></tr></table></figure>
-<p>查看自己的Git的user name和email:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">　git config user.name</div><div class="line">　git config user.email</div></pre></td></tr></table></figure>
 </li>
-<li><p>2.检查是否已经有SSH Key。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd ~/.ssh</div><div class="line">ls</div></pre></td></tr></table></figure>
-</li>
-<li><p>3.生成密钥</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;460284524@qq.com&quot;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">连续3个回车。如果不需要密码的话。</div><div class="line">最后得到了两个文件：id_rsa和id_rsa.pub。</div><div class="line">默认的存储路径是：C:\Users\Administrator\.ssh</div></pre></td></tr></table></figure>
+<li><p>访问对象——增加键值对：</p>
 <ul>
-<li><p>4.添加密钥到ssh-agent</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">eval &quot;$(ssh-agent -s)&quot;</div></pre></td></tr></table></figure>
-<p>添加生成的 SSH key 到 ssh-agent。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-add ~/.ssh/id_rsa</div></pre></td></tr></table></figure>
-</li>
-<li><p>5.登陆Github, 添加 ssh<br>把id_rsa.pub文件里的内容复制到SSH keys</p>
-</li>
-<li><p>6.测试：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure>
-<p>你将会看到：如果看到Hi后面是你的用户名，就说明成功了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">如果提示Are you sure you want to continue connecting (yes/no)?，输入yes</div></pre></td></tr></table></figure>
+<li>对象名.属性名=值</li>
+<li>对象名[“属性名”]=值<blockquote>
+<p>属性名为数字时，只能用“对象名[“属性名”]=值”的方式来就行添加或获取，并且引号可以不写。</p>
+</blockquote>
 </li>
 </ul>
-<h3 id="配置Deployment"><a href="#配置Deployment" class="headerlink" title="配置Deployment"></a>配置Deployment</h3><ul>
-<li><p>配置_config.yml中有关deploy的部分：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">type: git</div><div class="line">repository: git@github.com:githufei/githufei.github.io.git</div><div class="line">branch: master</div></pre></td></tr></table></figure>
+</li>
+<li><p>访问对象——修改键值对：</p>
+<ul>
+<li>对象名.属性名=值</li>
+<li>对象名[“属性名”]=值</li>
+</ul>
+</li>
+<li><p>访问对象——删除：</p>
+<ol>
+<li>删除整个键值对<br>delete 对象名.属性名</li>
+<li>删除属性值，保留属性名<br>delete 对象名.属性名=null</li>
+</ol>
 </li>
 </ul>
-<h2 id="写博客、发布文章"><a href="#写博客、发布文章" class="headerlink" title="写博客、发布文章"></a>写博客、发布文章</h2><ul>
-<li><p>1.定位到我们的hexo根目录，执行命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new &apos;my-first-blog&apos;</div></pre></td></tr></table></figure>
-</li>
-<li><p>hexo会帮我们在_posts下生成相关md文件,用马克飞象打开写文章就可以</p>
-</li>
-<li><p>文章编辑好之后，运行生成、部署命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g   // 生成</div><div class="line">hexo d   // 部署</div></pre></td></tr></table></figure>
-<p>或者</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d -g #在部署前先生成</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj=&#123;&#125;;<span class="comment">//创建一个新的对象</span></div><div class="line">obj.属性名=属性值; <span class="comment">//向对象中增加键值对</span></div><div class="line">obj.属性名=新的属性值;<span class="comment">//修改对象中属性值</span></div><div class="line"><span class="keyword">delete</span> obj.属性名=<span class="literal">null</span>;<span class="comment">//删除对象中的属性值，保留属性名</span></div><div class="line"><span class="keyword">delete</span> obj.属性名;<span class="comment">//删除对象中的属性键值对</span></div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var obj=&#123;&#125;;//创建一个新的对象</div><div class="line">obj.["属性名"]=属性值; //向对象中增加键值对</div><div class="line">obj.["属性名"]"=新的属性值;//修改对象中属性值</div><div class="line">delete obj.["属性名"]=null;//删除对象中的属性值，保留属性名</div><div class="line">delete obj.["属性名"];//删除对象中的属性键值对</div></pre></td></tr></table></figure>
+<ul>
+<li><a href="##">习题2</a></li>
+</ul>
+<h2 id="函数function"><a href="#函数function" class="headerlink" title="函数function"></a>函数function</h2><h4 id="函数的语法"><a href="#函数的语法" class="headerlink" title="函数的语法"></a>函数的语法</h4><ul>
+<li>函数的定义（创建）</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> 函数名(<span class="params"></span>)</span>&#123;</div><div class="line">	js代码块</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>函数的调用（执行）<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">函数名();</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="踩坑提醒"><a href="#踩坑提醒" class="headerlink" title="踩坑提醒"></a>踩坑提醒</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">deloyer not found:git</div></pre></td></tr></table></figure>
-<p> 这样的错误是需要装插件</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<blockquote>
+<p>函数调用要加上后面的()，如果只有函数名，而没有小括号，代表的是函数本身，而函数没有执行。加上小括号后代表的是执行函数</p>
+</blockquote>
+<ul>
+<li>因为函数是引用数据类型，所以在运行时，浏览器会给函数开辟一个内存空间，将代码以字符串的形式放入，只有在调取这个函数的时候，函数才会执行，不会随着全局作用域一起执行；</li>
+<li>函数定义后，可以多次执行，并且每次执行与上一次执行没有任何关系。</li>
+</ul>
+<h4 id="函数的原理："><a href="#函数的原理：" class="headerlink" title="函数的原理："></a>函数的原理：</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">   total=a+b;</div><div class="line">   <span class="keyword">return</span> total;</div><div class="line">&#125;</div><div class="line">sum(<span class="number">1</span>,<span class="number">2</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>当浏览器加载页面的时候，首先会提供一个供js代码执行的环境，叫做全局作用域。</li>
+<li>浏览器加载时遇到函数的创建，<br>1)首先开辟一个新的内存空间，浏览器为其分配一个十六进制的内存空间，我们假设地址为xxxfff000<br>2)把函数体中的js代码当作<strong>字符串</strong>存储到内存空间中<br>3)再把这个地址赋值给当前的函数，此时sum(a,b)=xxxfff000；</li>
+<li>函数执行的时候，把之前存储的字符串变成js代码，然后从上到下依次执行。<br>1)当函数执行的时候，首先会提供一个供函数体中代码执行的环境，叫私有作用域。<br>2)把函数体中的代码字符串变成代码从上到下执行。</li>
+<li>函数执行的时候，首先会形成一个新的私有作用域，供函数体中的代码从上到下执行，形成的那个私有的作用域，把函数体中的代码都包起来，保护了里面的私有的变量不受外界的干扰（外面获取不了也修改不了），我们把函数执行的时候形成的这种保护机制叫做“<strong>闭包</strong>”。</li>
+</ul>
+<h4 id="函数中的参数"><a href="#函数中的参数" class="headerlink" title="函数中的参数"></a>函数中的参数</h4><ul>
+<li>形参是用来接收函数执行时传入的实参的入口，形参相当于一个变量，只不过是只定义而未赋值的变量；</li>
+<li><p>实参是在函数执行时定义的，相当于函数执行值给形参赋值，实参和形参的顺序是一一对应关系。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">total</span>(<span class="params">形参<span class="number">1</span>,形参<span class="number">2</span></span>)</span>&#123;</div><div class="line">	函数体</div><div class="line">&#125;</div><div class="line">total(实参<span class="number">1</span>,实参<span class="number">2</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>执行的时候只需要把对应的形参的值传递给函数即可。</p>
+</li>
+<li>如果定义了形参，但在执行的时候没有传递实参，默认的形参的值是undefined。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">    sum=a+b;</div><div class="line">    <span class="built_in">console</span>.log(sum);</div><div class="line">    &#125;</div><div class="line">sum(<span class="number">1</span>,<span class="number">2</span>);  <span class="comment">//sum=1+2   →3</span></div><div class="line">sum(<span class="number">3</span>);<span class="comment">//sum=3+undefined  →NaN</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="return"><a href="#return" class="headerlink" title="return"></a>return</h4><ul>
+<li>作用：将函数中的值的返回到函数外<br>因为函数是一个引用数据类型，函数中的内容都会在浏览器开辟的内存空间中以字符串的形式保存，那么其它空间或全局作用域中想要得到函数内的变量，是没有办法的，这个内存空间将这个里面的变量保护起来了，如果想要获取函数内的值，可以用个return value的形式将值返回到函数外，函数名()用来接收这个函数返回值。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> total=<span class="number">300</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> total=fn();<span class="comment">//执行fn，将fn执行的返回值赋值给total</span></div><div class="line"><span class="built_in">console</span>.log(total);<span class="comment">//输出为undefined。</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> total=<span class="number">2</span>;</div><div class="line">    <span class="keyword">return</span> total*<span class="number">10</span>;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(fn);<span class="comment">//输出fn这个函数本身</span></div><div class="line"><span class="built_in">console</span>.log(fn());<span class="comment">//输出fn执行的结果，返回值20</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> total=<span class="number">2</span>;</div><div class="line">    <span class="keyword">return</span>;<span class="comment">//return;的返回值是undefined</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);<span class="comment">//return后面的代码不会再执行</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(fn());<span class="comment">//输出fn运行的返回值是undefined</span></div></pre></td></tr></table></figure>
+<blockquote>
+<ol>
+<li>函数内遇到return，return后面的代码就不会再执行，因此return有终止函数体中代码执行的作用。</li>
+<li>return 将值返回到函数外</li>
+<li>函数执行用来接收这个返回值</li>
+<li>形参是函数的入口，返回值是函数的出口</li>
+<li>如果函数中没有return，默认的返回值是undefined</li>
+</ol>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="number">2</span>);    </div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(fn());</div><div class="line"><span class="comment">//fn(),fn函数先执行，得到一个返回值（return后面的内容是什么就返回什么），将这个返回值输出:</span></div><div class="line">   <span class="comment">//&gt;输出1</span></div><div class="line">   <span class="comment">//&gt;输出function()&#123;console.log(2);&#125;</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> ff=fn();<span class="comment">//将fn执行的结果赋值给ff，ff=function()&#123;console.log(2)&#125;</span></div><div class="line">    <span class="comment">//&gt;输出1</span></div><div class="line">    <span class="comment">//&gt;输出2</span></div><div class="line"><span class="built_in">console</span>.log(ff());<span class="comment">//ff()代表ff执行的结果，ff执行的结果就是function()&#123;console.log(2)&#125;的返回值，返回值是undefined；</span></div><div class="line">    <span class="comment">//&gt;输出undefined</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</div><div class="line">    <span class="keyword">return</span> (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="number">2</span>);    </div><div class="line">    &#125;)();<span class="comment">//自执行函数</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(fn());</div><div class="line"></div><div class="line"><span class="comment">//输出</span></div><div class="line">    &gt;<span class="number">1</span></div><div class="line">    &gt;<span class="number">2</span></div><div class="line">    &gt;<span class="literal">undefined</span></div></pre></td></tr></table></figure>
+<h4 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h4><p>arguments是函数自带的用来接收函数传递进来的参数值的集合，（不管写没写形参，也不管传递实参，arguments始终都是存在的。）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.dir(<span class="built_in">arguments</span>);</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="built_in">arguments</span>);<span class="comment">//→"object" 它是一个对象数据类型</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> total=sum(<span class="number">100</span>,<span class="number">200</span>,<span class="number">300</span>);</div></pre></td></tr></table></figure></p>
+<pre><code>Arguments[3]
+    0: 100
+    1: 200
+    2: 300
+callee: function sum()
+length: 3
+__proto__:Object
+</code></pre><p>观察它的结构，arguments是以数字作为索引，索引从0开始逐渐递增，索引0存储的是第一个实参值，索引1存储的是第二个实参值，索引n存储的是第n+1个实参值；有一个叫length的属性代表一共传递了多少个实参；→它不是数字，称之为类数组。</p>
+<p>arguments还有个属性叫callee，<strong>arguments.callee代表的是函数本身</strong>(如上面例子中的，arguments.callee()和sum()是一个意思)</p>
+<p>arguments 获取到的是一个实参的集合，将获取到的实参放在一个中括号中，每一个实参之间用逗号隔开。</p>
+<p>案例：<a href="##">任意数求和</a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">var</span> total=<span class="literal">null</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="built_in">arguments</span>.length;i++)&#123;</div><div class="line">			<span class="comment">//将传进来的值转为数字</span></div><div class="line">			<span class="keyword">var</span> cur=<span class="built_in">Number</span>(<span class="built_in">arguments</span>[i]);</div><div class="line">			<span class="comment">//判断转化后是不是一个有效数字</span></div><div class="line">			<span class="keyword">if</span>(!<span class="built_in">isNaN</span>(cur))&#123;</div><div class="line">				total+=cur;</div><div class="line">			&#125;</div><div class="line">		&#125; </div><div class="line">		<span class="keyword">return</span> total;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">console</span>.log(sum(<span class="number">1</span>,<span class="string">"1"</span>,<span class="number">3</span>,<span class="literal">null</span>,<span class="string">"a"</span>,<span class="number">8</span>));</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure></p>
+<h4 id="实名函数和匿名函数"><a href="#实名函数和匿名函数" class="headerlink" title="实名函数和匿名函数"></a>实名函数和匿名函数</h4><p>实名函数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fnName</span>(<span class="params"></span>)</span>&#123;&#125;</div></pre></td></tr></table></figure></p>
+<p>匿名函数：<br>常见的使用匿名函数的场景：<br>1）给元素绑定事件<br>2）把函数当作参数，比如定时器，sort，forEach，map<br>在js中常用到的匿名函数有两种方式：<br>1）自执行函数：函数定义和函数执行一起完成<br>2）函数表达式：把函数定义的部分当作一个值赋值给一个变量或者元素的某一个事件。<br><strong>自执行函数</strong><br>;(function(形参){函数体})(实参)//最常用的写法，前面加;的作用是为了防止上面代码结束不加分号而引起语义错误。<br>+function(形参){函数体}(实参)<br>-function(形参){函数体}(实参)<br>!function(形参){函数体}(实参)<br>~function(形参){函数体}(实参)<br>各种写法表示的都是相同的意思。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">;(<span class="function"><span class="keyword">function</span> (<span class="params">a</span>) </span>&#123;</div><div class="line">       conlole.log(a);</div><div class="line">   &#125;)(<span class="number">100</span>);</div><div class="line">   +<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">       </div><div class="line">   &#125;();</div><div class="line">   ~<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">       </div><div class="line">   &#125;();</div><div class="line">   -<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">       </div><div class="line">   &#125;();</div></pre></td></tr></table></figure></p>
+<p><strong>函数表达式</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">   btn.onclick=<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</div><div class="line">	alert(<span class="string">'你点我，我就弹出'</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> fn=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"><span class="comment">//执行</span></div><div class="line">fn()</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>函数名也是一个变量，用来代表和储存这个函数</p>
+</blockquote>
+<p>案例：</p>
+<ul>
+<li>点击弹出当前行数</li>
+<li>隔行变色</li>
+<li>移入移出</li>
+<li>将前三个整理到一起</li>
+<li>选项卡</li>
+<li>99</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">lis[i].onclick=function () &#123;</div><div class="line">	// 如果这个函数内出现了this，this代表的是当前操作的这个对象</div><div class="line">    alert(&apos;我是第&apos;+this.zfpx+&apos;个li&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="js中的运算符"><a href="#js中的运算符" class="headerlink" title="js中的运算符"></a>js中的运算符</h3><ul>
+<li>赋值运算<ul>
+<li>= 赋值 </li>
+<li>+= <ul>
+<li>x+=y  –&gt;  x=x+y</li>
+</ul>
+</li>
+<li>-=   <ul>
+<li>x-=y   –&gt;  x=x-y</li>
+</ul>
+</li>
+<li>*= <ul>
+<li>x<em>=y  –&gt;  x=x</em>y</li>
+</ul>
+</li>
+<li>/= <ul>
+<li>x/=y  –&gt;  x=x/y</li>
+</ul>
+</li>
+<li>%=<ul>
+<li>x%=y   –&gt;  x=x%y</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>比较运算符 </p>
+<ul>
+<li><p>==比较</p>
+</li>
+<li><p>===绝对比较</p>
+<ul>
+<li>比较等号两侧的值是否相等，两侧的值需是相同数据类型，如果相等，返回true，如果不相等返回false。</li>
+</ul>
+</li>
+<li>!= 不等于</li>
+<li><blockquote>
+<p>小于</p>
+</blockquote>
+</li>
+<li>&lt; 大于</li>
+<li><blockquote>
+<p>=大于等于</p>
+</blockquote>
+</li>
+<li>&lt;=小于等于</li>
+</ul>
+</li>
+<li>逻辑运算符<ul>
+<li>&amp;&amp; 和  and</li>
+<li>||  或  or</li>
+<li>！非</li>
+<li>&amp;&amp;，第一个值转布尔为true则返回第二个值，第一个为false则返回第一个值</li>
+<li>||，第一个值转布尔为true则返回第一个值，第一个值为false则返回第二个值</li>
+<li>console.log(! [] &amp;&amp; “” )  –&gt;false</li>
+<li>console.log( ![] || “” )  –&gt;  “”</li>
+</ul>
+</li>
+<li>算术运算符<ul>
+<li>+加</li>
+<li>-减</li>
+<li>*乘</li>
+<li>/除</li>
+<li>%模（求余数）</li>
+<li>++自加</li>
+<li>–自减</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x=<span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> y=++x;  <span class="comment">//先运算，再赋值，相当于x=x+1,y=x</span></div><div class="line"><span class="built_in">console</span>.log(x,y);</div><div class="line">输出<span class="number">2</span>,<span class="number">2</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x=<span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> y=x++; <span class="comment">//先运算，后累加,相当于y=x，x=x+1</span></div><div class="line"><span class="built_in">console</span>.log(x,y);</div><div class="line">输出<span class="number">2</span>,<span class="number">1</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</div><div class="line"><span class="built_in">console</span>.log(a);</div><div class="line"><span class="built_in">console</span>.log(a++);</div><div class="line"><span class="comment">//输出1，1。a++表达式整体的值是1，a++后a的值是2</span></div><div class="line"><span class="keyword">var</span> b=<span class="number">1</span>;</div><div class="line"><span class="built_in">console</span>.log(b);</div><div class="line"><span class="built_in">console</span>.log(++b);</div><div class="line"><span class="comment">//输出1，2。++b表达式整体的值是2，++b后b的值是2</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s=<span class="number">2</span>;</div><div class="line"><span class="built_in">console</span>.log((s++)+(++s)+(s--)+s+(--s));</div></pre></td></tr></table></figure>
+<h4 id="js中数据类型的比较"><a href="#js中数据类型的比较" class="headerlink" title="js中数据类型的比较"></a>js中数据类型的比较</h4><ul>
+<li>比较等号两侧的值是否相等，如果相等，返回true，不相等返回false。允许两侧数据类型不一致，如果不一致，等号两侧会默认转为同一数据类型再进行比较。</li>
+<li>对象==对象    永远不相等</li>
+<li>对象==字符串   对象转为字符串，<strong>字符串和字符串比较</strong></li>
+<li>对象==数字   对象转为字符串，字符串转为数字，数字和数字比较</li>
+<li>对象==布尔   对象转为字符串，字符串转为数字，布尔转为数字，数字和数字比较</li>
+<li>字符串==数字  字符串转为数字，数字和数字比较</li>
+<li>字符串==布尔  字符串转为数字，布尔转为数字，数字和数字比较</li>
+<li>布尔==数字   布尔转为数字，数字和数字比较</li>
+<li>null==undefined    true</li>
+<li>null或undefined与其它数据类型比较都不相等</li>
+<li>NaN==NaN  永远不相等</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> &#123;&#125;==&#123;&#125;  F</div><div class="line"><span class="number">2.</span> []==[]  F</div><div class="line"><span class="number">3.</span> &#123;&#125;==[]  F</div><div class="line"><span class="number">4.</span> !<span class="number">0</span>==<span class="number">0</span>   F</div><div class="line"><span class="number">5.</span> <span class="string">""</span>==[]  T</div><div class="line"><span class="number">6.</span> ![]==<span class="literal">false</span> T</div><div class="line"><span class="number">7.</span> <span class="built_in">parseFloat</span>(<span class="string">"0.36a"</span>)==<span class="string">"0.36a"</span>  F</div><div class="line"><span class="number">8.</span> <span class="built_in">parseFloat</span>(<span class="string">"0.36a"</span>)==[<span class="string">"0.36a"</span>]  F</div><div class="line"><span class="number">9.</span> !(&#123;&#125;==![])  T</div><div class="line"><span class="number">10.</span> ![]==<span class="number">0</span>   T</div><div class="line"><span class="number">11.</span> <span class="built_in">Number</span>(<span class="string">"1"</span>+<span class="number">3</span>)=<span class="literal">NaN</span>  F</div><div class="line"><span class="number">12.</span> ![]=’’  T</div><div class="line"><span class="number">13.</span> []==![]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">**解析：**</div><div class="line">1. &#123;&#125;==&#123;&#125;  对象==对象，永远不相等，所以F</div><div class="line">2. []==[]  对象==对象，永远不相等，所以F</div><div class="line">3. &#123;&#125;==[]  对象==对象，永远不相等，所以F</div><div class="line">4. !0==0  布尔==数字，!Boolean(0)==0，!False==0，布尔转数字，数字和数字比较，1==0，所以F</div><div class="line">5. &quot;&quot;==[]  字符串==对象，对象转字符串，字符串和字符串比较。[].toString()=&quot;&quot;，&quot;&quot;==&quot;&quot;，所以T</div><div class="line">6. ![]==false 布尔==布尔，直接比较，Boolean([])=False，True==False，所以F</div><div class="line">7. parseFloat(&quot;0.36a&quot;)==&quot;0.36a&quot;  数字==字符串，字符串转为数字，数字和数字比较，parseFloat(&quot;0.36a&quot;)=0.36，Number(&quot;0.36a&quot;)=NaN，0.36==NaN，所以F</div><div class="line">8. parseFloat(&quot;0.36a&quot;)==[&quot;0.36a&quot;]  数字==对象，对象转为字符串，字符串转为数字，数字和数字比较，parseFloat(&quot;0.36a&quot;)=0.36,([&quot;0.36a&quot;]).toString()=&quot;0.36a&quot;,Number(&quot;0.36a&quot;)=NaN,0.36==NaN,所以F</div><div class="line">9. !(&#123;&#125;==![])  括号内，对象==布尔，对象转字符串，字符串转数字，布尔转数字，数字与数字比较，(&#123;&#125;).toString()=&quot;object Object&quot;,Number(&quot;object Object&quot;)=NaN;![]等价于Boolean([])取反，Boolean([])=true，取反为false，所以![]为false；原题等价于&#123;&#125;==false取反；NaN==0，结果为false，取反为true。</div><div class="line">10. ![]==0 布尔==数字，布尔转数字，数字与数字比较，![]为false，false转数字为0，0==0，所以最后为T</div><div class="line">11. Number(&quot;1&quot;+3)==NaN  数字==NaN，永远不相等。 Number(&quot;1&quot;+3)=13，所以F</div><div class="line">12. ![]==&quot;&quot;  布尔==字符串，![]为false，false转数字为0，&quot;&quot;转数字为0，0==0，所以为T</div><div class="line">13.  []==![]  对象==布尔，对象转字符串，字符串转数字，布尔转数字，数字与数字比较；[]转字符串为&quot;&quot;,&quot;&quot;转数字为0，！[]计算结果为false，false转数字为0，0==0，所以为T</div></pre></td></tr></table></figure>
+<h4 id="基本数据类型和引用数据类型的区别"><a href="#基本数据类型和引用数据类型的区别" class="headerlink" title="基本数据类型和引用数据类型的区别"></a>基本数据类型和引用数据类型的区别</h4><p>基本数据类型：<br>如果将一个变量的基本数据类型的值赋值给另一个变量，那么原来变量之后的操作与另一个变量没有任何关系，因为基本数据类型会直接将值传递给对方，相当于两个变量存的值一直，但是有两份。</p>
+<blockquote>
+<p>基本数据类型直接操作值。</p>
+</blockquote>
+<p>引用数据类型：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj1=&#123;<span class="attr">name</span>:<span class="string">'zfpx'</span>&#125;;</div><div class="line"><span class="keyword">var</span> obj2=obj1;</div><div class="line">obj1.name=<span class="string">"珠峰培训"</span>；</div><div class="line"><span class="built_in">console</span>.log(obj1,boj2);</div></pre></td></tr></table></figure></p>
+<ul>
+<li>浏览器提供一个全局作用域供这段代码从上到下执行；</li>
+<li>遇到obj1，发现其是引用数据类型，浏览器会开辟一个内存空间将obj1中的代码块当作字符串，存储在这个内存空间中，给内存空间一个十六进制的地址，将这个地址返回给obj1，此时obj1=内存地址；</li>
+<li>当obj2=obj1时，obj1给obj2的其实是obj1中存储的内存地址，那么obj2也会通过这个地址去查找和obj1一样的内存空间；</li>
+<li>无论修改obj1还是修改obj2，其实都是操作的一个地址，所以一个改变，另一个也会跟着改变。<blockquote>
+<p>引用数据类型操作的是一个内存地址。<br>举例：D盘中放的是源文件，将这个源文件增加了几个快捷方式，一个放在桌面上，一个放在c盘中，一个放在E盘中，那么无论桌面还是C盘E盘，操作的都是D盘的原始文件，也就是说文件只有一个，只不过通道有很多。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="数据类型的检测"><a href="#数据类型的检测" class="headerlink" title="数据类型的检测"></a>数据类型的检测</h4><ul>
+<li><p>typeof value运算符</p>
+<ul>
+<li>检测的返回值是一个字符串，引号中间包着该值的数据类型。</li>
+<li>typeof运算符不能具体检测引用数据类型，返回值只是object和function</li>
+<li>typeof运算符检测null的时候，返回值为“object” <ul>
+<li>typeof null –&gt; “object”</li>
+<li>typeof undefined –&gt; “undefined”</li>
+<li>typeof  /^%/ –&gt; “object”</li>
+<li>typeof(typeof Number([])) –&gt;”string”</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>instanceof 判断已知对象是否属于某一类</p>
+<ul>
+<li>判断一个值是否属于这个类的一个实例</li>
+<li>每种数据类型都有自己所属的类，instanceof能详细检测引用数据类型，但是对于基本数据类型只有通过构造函数方式创建的才能检测</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] <span class="keyword">instanceof</span> <span class="built_in">Array</span>   --&gt;<span class="literal">true</span></div><div class="line"><span class="keyword">var</span> num=<span class="number">1</span>;</div><div class="line"><span class="built_in">console</span>.log(num <span class="keyword">instanceof</span> <span class="built_in">Number</span>);   <span class="comment">//false</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> num=<span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">1</span>);</div><div class="line"><span class="built_in">console</span>.log(num <span class="keyword">instanceof</span> <span class="built_in">Number</span>);   <span class="comment">//true</span></div></pre></td></tr></table></figure>
+<ul>
+<li>constructor (构造器)<ul>
+<li>根据对象的 constructor 判断<br><code>[1,2,3].constructor===Array  --&gt;true</code></li>
+</ul>
+</li>
+<li>prototype<br><code>Object.prototype.toString.call([1,2]) --&gt;[object Array]</code></li>
+</ul>
 
       
 
@@ -342,7 +511,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">js js数据类型</a>
         		</li>
       		
 		</ul>
@@ -398,7 +567,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/04/25/基于GitHub搭建博客/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/04/25/note/3.js中的引用数据类型/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -412,18 +581,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/04/02/note/1.js基础知识/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/04/25/基于GitHub搭建博客-二/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          js基础知识
+          使用Hexo搭建GitHub博客(二)
         
       </div>
     </a>
   
   
-    <a href="/2017/04/25/基于GitHub搭建博客-二/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">使用Hexo搭建GitHub博客(二)</div>
+    <a href="/2017/04/25/4.js中的引用数据类型(2)和DOM操作/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js中的引用数据类型（二）和DOM操作</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -450,7 +619,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建环境准备"><span class="toc-number">1.</span> <span class="toc-text">搭建环境准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Node-js-的安装和准备"><span class="toc-number">1.1.</span> <span class="toc-text">Node.js 的安装和准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置Git环境"><span class="toc-number">1.2.</span> <span class="toc-text">配置Git环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#github账户的注册和配置"><span class="toc-number">1.3.</span> <span class="toc-text">github账户的注册和配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Hexo"><span class="toc-number">2.</span> <span class="toc-text">安装Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo的相关配置"><span class="toc-number">3.</span> <span class="toc-text">hexo的相关配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化Hexo"><span class="toc-number">3.1.</span> <span class="toc-text">初始化Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#首次体验Hexo"><span class="toc-number">3.2.</span> <span class="toc-text">首次体验Hexo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#怎样将Hexo与github-page-联系起来"><span class="toc-number">4.</span> <span class="toc-text">怎样将Hexo与github page 联系起来</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置Git个人信息"><span class="toc-number">4.1.</span> <span class="toc-text">配置Git个人信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置Deployment"><span class="toc-number">4.2.</span> <span class="toc-text">配置Deployment</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写博客、发布文章"><span class="toc-number">5.</span> <span class="toc-text">写博客、发布文章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#踩坑提醒"><span class="toc-number">5.1.</span> <span class="toc-text">踩坑提醒</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#object对象"><span class="toc-number">1.</span> <span class="toc-text">object对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数function"><span class="toc-number">2.</span> <span class="toc-text">函数function</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#函数的语法"><span class="toc-number">2.0.1.</span> <span class="toc-text">函数的语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数的原理："><span class="toc-number">2.0.2.</span> <span class="toc-text">函数的原理：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数中的参数"><span class="toc-number">2.0.3.</span> <span class="toc-text">函数中的参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#return"><span class="toc-number">2.0.4.</span> <span class="toc-text">return</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#arguments"><span class="toc-number">2.0.5.</span> <span class="toc-text">arguments</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#实名函数和匿名函数"><span class="toc-number">2.0.6.</span> <span class="toc-text">实名函数和匿名函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#js中的运算符"><span class="toc-number">2.1.</span> <span class="toc-text">js中的运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#js中数据类型的比较"><span class="toc-number">2.1.1.</span> <span class="toc-text">js中数据类型的比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基本数据类型和引用数据类型的区别"><span class="toc-number">2.1.2.</span> <span class="toc-text">基本数据类型和引用数据类型的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据类型的检测"><span class="toc-number">2.1.3.</span> <span class="toc-text">数据类型的检测</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -466,7 +635,7 @@
   
 
   
-  <div id="SOHUCS" sid="基于GitHub搭建博客" ></div> 
+  <div id="SOHUCS" sid="note/3.js中的引用数据类型" ></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = "cyt8qNkrw"; 
